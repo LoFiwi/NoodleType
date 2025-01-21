@@ -1,0 +1,3 @@
+/home/lofi/Desktop/NoodleType/build/CMakeFiles/NoodleType.dir
+/home/lofi/Desktop/NoodleType/build/CMakeFiles/edit_cache.dir
+/home/lofi/Desktop/NoodleType/build/CMakeFiles/rebuild_cache.dir
