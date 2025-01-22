@@ -8,6 +8,9 @@
 
 int main(int, char**)
 {
+
+    // testForcommit
+
     // Ініціалізація GLFW
     if (!glfwInit())
         return -1;
