@@ -8,6 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/lofi/Desktop/NoodleType/imgui-master/backends/imgui_impl_glfw.cpp" "CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_glfw.cpp.o" "gcc" "CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_glfw.cpp.o.d"
+  "/home/lofi/Desktop/NoodleType/imgui-master/backends/imgui_impl_opengl3.cpp" "CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_opengl3.cpp.o" "gcc" "CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_opengl3.cpp.o.d"
+  "/home/lofi/Desktop/NoodleType/imgui-master/imgui.cpp" "CMakeFiles/NoodleType.dir/imgui-master/imgui.cpp.o" "gcc" "CMakeFiles/NoodleType.dir/imgui-master/imgui.cpp.o.d"
+  "/home/lofi/Desktop/NoodleType/imgui-master/imgui_draw.cpp" "CMakeFiles/NoodleType.dir/imgui-master/imgui_draw.cpp.o" "gcc" "CMakeFiles/NoodleType.dir/imgui-master/imgui_draw.cpp.o.d"
+  "/home/lofi/Desktop/NoodleType/imgui-master/imgui_tables.cpp" "CMakeFiles/NoodleType.dir/imgui-master/imgui_tables.cpp.o" "gcc" "CMakeFiles/NoodleType.dir/imgui-master/imgui_tables.cpp.o.d"
+  "/home/lofi/Desktop/NoodleType/imgui-master/imgui_widgets.cpp" "CMakeFiles/NoodleType.dir/imgui-master/imgui_widgets.cpp.o" "gcc" "CMakeFiles/NoodleType.dir/imgui-master/imgui_widgets.cpp.o.d"
   "/home/lofi/Desktop/NoodleType/src/main.cpp" "CMakeFiles/NoodleType.dir/src/main.cpp.o" "gcc" "CMakeFiles/NoodleType.dir/src/main.cpp.o.d"
   )
 

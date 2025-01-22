@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/lofi/Desktop/NoodleType/imgui-master -I/home/lofi/Desktop/NoodleType/imgui-master/backends
 
 CXX_FLAGS = -std=gnu++17
 

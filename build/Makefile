@@ -129,6 +129,150 @@ NoodleType/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/build
 .PHONY : NoodleType/fast
 
+imgui-master/backends/imgui_impl_glfw.o: imgui-master/backends/imgui_impl_glfw.cpp.o
+.PHONY : imgui-master/backends/imgui_impl_glfw.o
+
+# target to build an object file
+imgui-master/backends/imgui_impl_glfw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_glfw.cpp.o
+.PHONY : imgui-master/backends/imgui_impl_glfw.cpp.o
+
+imgui-master/backends/imgui_impl_glfw.i: imgui-master/backends/imgui_impl_glfw.cpp.i
+.PHONY : imgui-master/backends/imgui_impl_glfw.i
+
+# target to preprocess a source file
+imgui-master/backends/imgui_impl_glfw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_glfw.cpp.i
+.PHONY : imgui-master/backends/imgui_impl_glfw.cpp.i
+
+imgui-master/backends/imgui_impl_glfw.s: imgui-master/backends/imgui_impl_glfw.cpp.s
+.PHONY : imgui-master/backends/imgui_impl_glfw.s
+
+# target to generate assembly for a file
+imgui-master/backends/imgui_impl_glfw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_glfw.cpp.s
+.PHONY : imgui-master/backends/imgui_impl_glfw.cpp.s
+
+imgui-master/backends/imgui_impl_opengl3.o: imgui-master/backends/imgui_impl_opengl3.cpp.o
+.PHONY : imgui-master/backends/imgui_impl_opengl3.o
+
+# target to build an object file
+imgui-master/backends/imgui_impl_opengl3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_opengl3.cpp.o
+.PHONY : imgui-master/backends/imgui_impl_opengl3.cpp.o
+
+imgui-master/backends/imgui_impl_opengl3.i: imgui-master/backends/imgui_impl_opengl3.cpp.i
+.PHONY : imgui-master/backends/imgui_impl_opengl3.i
+
+# target to preprocess a source file
+imgui-master/backends/imgui_impl_opengl3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_opengl3.cpp.i
+.PHONY : imgui-master/backends/imgui_impl_opengl3.cpp.i
+
+imgui-master/backends/imgui_impl_opengl3.s: imgui-master/backends/imgui_impl_opengl3.cpp.s
+.PHONY : imgui-master/backends/imgui_impl_opengl3.s
+
+# target to generate assembly for a file
+imgui-master/backends/imgui_impl_opengl3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_opengl3.cpp.s
+.PHONY : imgui-master/backends/imgui_impl_opengl3.cpp.s
+
+imgui-master/imgui.o: imgui-master/imgui.cpp.o
+.PHONY : imgui-master/imgui.o
+
+# target to build an object file
+imgui-master/imgui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/imgui.cpp.o
+.PHONY : imgui-master/imgui.cpp.o
+
+imgui-master/imgui.i: imgui-master/imgui.cpp.i
+.PHONY : imgui-master/imgui.i
+
+# target to preprocess a source file
+imgui-master/imgui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/imgui.cpp.i
+.PHONY : imgui-master/imgui.cpp.i
+
+imgui-master/imgui.s: imgui-master/imgui.cpp.s
+.PHONY : imgui-master/imgui.s
+
+# target to generate assembly for a file
+imgui-master/imgui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/imgui.cpp.s
+.PHONY : imgui-master/imgui.cpp.s
+
+imgui-master/imgui_draw.o: imgui-master/imgui_draw.cpp.o
+.PHONY : imgui-master/imgui_draw.o
+
+# target to build an object file
+imgui-master/imgui_draw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/imgui_draw.cpp.o
+.PHONY : imgui-master/imgui_draw.cpp.o
+
+imgui-master/imgui_draw.i: imgui-master/imgui_draw.cpp.i
+.PHONY : imgui-master/imgui_draw.i
+
+# target to preprocess a source file
+imgui-master/imgui_draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/imgui_draw.cpp.i
+.PHONY : imgui-master/imgui_draw.cpp.i
+
+imgui-master/imgui_draw.s: imgui-master/imgui_draw.cpp.s
+.PHONY : imgui-master/imgui_draw.s
+
+# target to generate assembly for a file
+imgui-master/imgui_draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/imgui_draw.cpp.s
+.PHONY : imgui-master/imgui_draw.cpp.s
+
+imgui-master/imgui_tables.o: imgui-master/imgui_tables.cpp.o
+.PHONY : imgui-master/imgui_tables.o
+
+# target to build an object file
+imgui-master/imgui_tables.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/imgui_tables.cpp.o
+.PHONY : imgui-master/imgui_tables.cpp.o
+
+imgui-master/imgui_tables.i: imgui-master/imgui_tables.cpp.i
+.PHONY : imgui-master/imgui_tables.i
+
+# target to preprocess a source file
+imgui-master/imgui_tables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/imgui_tables.cpp.i
+.PHONY : imgui-master/imgui_tables.cpp.i
+
+imgui-master/imgui_tables.s: imgui-master/imgui_tables.cpp.s
+.PHONY : imgui-master/imgui_tables.s
+
+# target to generate assembly for a file
+imgui-master/imgui_tables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/imgui_tables.cpp.s
+.PHONY : imgui-master/imgui_tables.cpp.s
+
+imgui-master/imgui_widgets.o: imgui-master/imgui_widgets.cpp.o
+.PHONY : imgui-master/imgui_widgets.o
+
+# target to build an object file
+imgui-master/imgui_widgets.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/imgui_widgets.cpp.o
+.PHONY : imgui-master/imgui_widgets.cpp.o
+
+imgui-master/imgui_widgets.i: imgui-master/imgui_widgets.cpp.i
+.PHONY : imgui-master/imgui_widgets.i
+
+# target to preprocess a source file
+imgui-master/imgui_widgets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/imgui_widgets.cpp.i
+.PHONY : imgui-master/imgui_widgets.cpp.i
+
+imgui-master/imgui_widgets.s: imgui-master/imgui_widgets.cpp.s
+.PHONY : imgui-master/imgui_widgets.s
+
+# target to generate assembly for a file
+imgui-master/imgui_widgets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/imgui-master/imgui_widgets.cpp.s
+.PHONY : imgui-master/imgui_widgets.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +306,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... NoodleType"
+	@echo "... imgui-master/backends/imgui_impl_glfw.o"
+	@echo "... imgui-master/backends/imgui_impl_glfw.i"
+	@echo "... imgui-master/backends/imgui_impl_glfw.s"
+	@echo "... imgui-master/backends/imgui_impl_opengl3.o"
+	@echo "... imgui-master/backends/imgui_impl_opengl3.i"
+	@echo "... imgui-master/backends/imgui_impl_opengl3.s"
+	@echo "... imgui-master/imgui.o"
+	@echo "... imgui-master/imgui.i"
+	@echo "... imgui-master/imgui.s"
+	@echo "... imgui-master/imgui_draw.o"
+	@echo "... imgui-master/imgui_draw.i"
+	@echo "... imgui-master/imgui_draw.s"
+	@echo "... imgui-master/imgui_tables.o"
+	@echo "... imgui-master/imgui_tables.i"
+	@echo "... imgui-master/imgui_tables.s"
+	@echo "... imgui-master/imgui_widgets.o"
+	@echo "... imgui-master/imgui_widgets.i"
+	@echo "... imgui-master/imgui_widgets.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
