@@ -3,7 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/home/lofi/Desktop/NoodleType/external/json/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",

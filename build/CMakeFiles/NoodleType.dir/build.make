@@ -188,10 +188,19 @@ NoodleType: CMakeFiles/NoodleType.dir/imgui-master/imgui_tables.cpp.o
 NoodleType: CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_glfw.cpp.o
 NoodleType: CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_opengl3.cpp.o
 NoodleType: CMakeFiles/NoodleType.dir/build.make
+NoodleType: external/glfw/src/libglfw3.a
+NoodleType: /usr/lib/x86_64-linux-gnu/libGL.so
+NoodleType: lib/libGLEW.so.2.2.0
+NoodleType: external/curlpp/libcurlpp.so.1.0.0
+NoodleType: /usr/lib/x86_64-linux-gnu/librt.a
+NoodleType: /usr/lib/x86_64-linux-gnu/libm.so
 NoodleType: /usr/lib/x86_64-linux-gnu/libGL.so
 NoodleType: /usr/lib/x86_64-linux-gnu/libGLU.so
-NoodleType: /usr/lib/x86_64-linux-gnu/libGLEW.so
-NoodleType: /usr/lib/x86_64-linux-gnu/libglfw.so.3.4
+NoodleType: /usr/lib/x86_64-linux-gnu/libSM.so
+NoodleType: /usr/lib/x86_64-linux-gnu/libICE.so
+NoodleType: /usr/lib/x86_64-linux-gnu/libX11.so
+NoodleType: /usr/lib/x86_64-linux-gnu/libXext.so
+NoodleType: /usr/lib/x86_64-linux-gnu/libcurl.so
 NoodleType: CMakeFiles/NoodleType.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lofi/Desktop/NoodleType/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable NoodleType"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/NoodleType.dir/link.txt --verbose=$(VERBOSE)

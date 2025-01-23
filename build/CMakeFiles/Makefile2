@@ -64,21 +64,136 @@ CMAKE_BINARY_DIR = /home/lofi/Desktop/NoodleType/build
 
 # The main recursive "all" target.
 all: CMakeFiles/NoodleType.dir/all
+all: external/glfw/all
+all: external/glew/build/cmake/all
+all: external/curlpp/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: external/glfw/preinstall
+preinstall: external/glew/build/cmake/preinstall
+preinstall: external/curlpp/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/NoodleType.dir/clean
+clean: external/glfw/clean
+clean: external/glew/build/cmake/clean
+clean: external/curlpp/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory external/curlpp
+
+# Recursive "all" directory target.
+external/curlpp/all: external/curlpp/CMakeFiles/curlpp.dir/all
+external/curlpp/all: external/curlpp/CMakeFiles/curlpp_static.dir/all
+external/curlpp/all: external/curlpp/extras/all
+.PHONY : external/curlpp/all
+
+# Recursive "preinstall" directory target.
+external/curlpp/preinstall: external/curlpp/extras/preinstall
+.PHONY : external/curlpp/preinstall
+
+# Recursive "clean" directory target.
+external/curlpp/clean: external/curlpp/CMakeFiles/curlpp.dir/clean
+external/curlpp/clean: external/curlpp/CMakeFiles/curlpp_static.dir/clean
+external/curlpp/clean: external/curlpp/extras/clean
+.PHONY : external/curlpp/clean
+
+#=============================================================================
+# Directory level rules for directory external/curlpp/extras
+
+# Recursive "all" directory target.
+external/curlpp/extras/all:
+.PHONY : external/curlpp/extras/all
+
+# Recursive "preinstall" directory target.
+external/curlpp/extras/preinstall:
+.PHONY : external/curlpp/extras/preinstall
+
+# Recursive "clean" directory target.
+external/curlpp/extras/clean:
+.PHONY : external/curlpp/extras/clean
+
+#=============================================================================
+# Directory level rules for directory external/glew/build/cmake
+
+# Recursive "all" directory target.
+external/glew/build/cmake/all: external/glew/build/cmake/CMakeFiles/glew.dir/all
+external/glew/build/cmake/all: external/glew/build/cmake/CMakeFiles/glew_s.dir/all
+external/glew/build/cmake/all: external/glew/build/cmake/CMakeFiles/glewinfo.dir/all
+external/glew/build/cmake/all: external/glew/build/cmake/CMakeFiles/visualinfo.dir/all
+.PHONY : external/glew/build/cmake/all
+
+# Recursive "preinstall" directory target.
+external/glew/build/cmake/preinstall:
+.PHONY : external/glew/build/cmake/preinstall
+
+# Recursive "clean" directory target.
+external/glew/build/cmake/clean: external/glew/build/cmake/CMakeFiles/glew.dir/clean
+external/glew/build/cmake/clean: external/glew/build/cmake/CMakeFiles/glew_s.dir/clean
+external/glew/build/cmake/clean: external/glew/build/cmake/CMakeFiles/glewinfo.dir/clean
+external/glew/build/cmake/clean: external/glew/build/cmake/CMakeFiles/visualinfo.dir/clean
+.PHONY : external/glew/build/cmake/clean
+
+#=============================================================================
+# Directory level rules for directory external/glfw
+
+# Recursive "all" directory target.
+external/glfw/all: external/glfw/src/all
+external/glfw/all: external/glfw/docs/all
+.PHONY : external/glfw/all
+
+# Recursive "preinstall" directory target.
+external/glfw/preinstall: external/glfw/src/preinstall
+external/glfw/preinstall: external/glfw/docs/preinstall
+.PHONY : external/glfw/preinstall
+
+# Recursive "clean" directory target.
+external/glfw/clean: external/glfw/CMakeFiles/uninstall.dir/clean
+external/glfw/clean: external/glfw/src/clean
+external/glfw/clean: external/glfw/docs/clean
+.PHONY : external/glfw/clean
+
+#=============================================================================
+# Directory level rules for directory external/glfw/docs
+
+# Recursive "all" directory target.
+external/glfw/docs/all:
+.PHONY : external/glfw/docs/all
+
+# Recursive "preinstall" directory target.
+external/glfw/docs/preinstall:
+.PHONY : external/glfw/docs/preinstall
+
+# Recursive "clean" directory target.
+external/glfw/docs/clean:
+.PHONY : external/glfw/docs/clean
+
+#=============================================================================
+# Directory level rules for directory external/glfw/src
+
+# Recursive "all" directory target.
+external/glfw/src/all: external/glfw/src/CMakeFiles/glfw.dir/all
+.PHONY : external/glfw/src/all
+
+# Recursive "preinstall" directory target.
+external/glfw/src/preinstall:
+.PHONY : external/glfw/src/preinstall
+
+# Recursive "clean" directory target.
+external/glfw/src/clean: external/glfw/src/CMakeFiles/glfw.dir/clean
+external/glfw/src/clean: external/glfw/src/CMakeFiles/update_mappings.dir/clean
+.PHONY : external/glfw/src/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/NoodleType.dir
 
 # All Build rule for target.
-CMakeFiles/NoodleType.dir/all:
+CMakeFiles/NoodleType.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
+CMakeFiles/NoodleType.dir/all: external/glew/build/cmake/CMakeFiles/glew.dir/all
+CMakeFiles/NoodleType.dir/all: external/curlpp/CMakeFiles/curlpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/lofi/Desktop/NoodleType/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target NoodleType"
@@ -86,7 +201,7 @@ CMakeFiles/NoodleType.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NoodleType.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 67
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/NoodleType.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 0
 .PHONY : CMakeFiles/NoodleType.dir/rule
@@ -99,6 +214,240 @@ NoodleType: CMakeFiles/NoodleType.dir/rule
 CMakeFiles/NoodleType.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NoodleType.dir/build.make CMakeFiles/NoodleType.dir/clean
 .PHONY : CMakeFiles/NoodleType.dir/clean
+
+#=============================================================================
+# Target rules for target external/glfw/CMakeFiles/uninstall.dir
+
+# All Build rule for target.
+external/glfw/CMakeFiles/uninstall.dir/all:
+	$(MAKE) $(MAKESILENT) -f external/glfw/CMakeFiles/uninstall.dir/build.make external/glfw/CMakeFiles/uninstall.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/glfw/CMakeFiles/uninstall.dir/build.make external/glfw/CMakeFiles/uninstall.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/lofi/Desktop/NoodleType/build/CMakeFiles --progress-num= "Built target uninstall"
+.PHONY : external/glfw/CMakeFiles/uninstall.dir/all
+
+# Build rule for subdir invocation for target.
+external/glfw/CMakeFiles/uninstall.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/CMakeFiles/uninstall.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 0
+.PHONY : external/glfw/CMakeFiles/uninstall.dir/rule
+
+# Convenience name for target.
+uninstall: external/glfw/CMakeFiles/uninstall.dir/rule
+.PHONY : uninstall
+
+# clean rule for target.
+external/glfw/CMakeFiles/uninstall.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/glfw/CMakeFiles/uninstall.dir/build.make external/glfw/CMakeFiles/uninstall.dir/clean
+.PHONY : external/glfw/CMakeFiles/uninstall.dir/clean
+
+#=============================================================================
+# Target rules for target external/glfw/src/CMakeFiles/glfw.dir
+
+# All Build rule for target.
+external/glfw/src/CMakeFiles/glfw.dir/all:
+	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/lofi/Desktop/NoodleType/build/CMakeFiles --progress-num=39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83 "Built target glfw"
+.PHONY : external/glfw/src/CMakeFiles/glfw.dir/all
+
+# Build rule for subdir invocation for target.
+external/glfw/src/CMakeFiles/glfw.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 45
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/src/CMakeFiles/glfw.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 0
+.PHONY : external/glfw/src/CMakeFiles/glfw.dir/rule
+
+# Convenience name for target.
+glfw: external/glfw/src/CMakeFiles/glfw.dir/rule
+.PHONY : glfw
+
+# clean rule for target.
+external/glfw/src/CMakeFiles/glfw.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/clean
+.PHONY : external/glfw/src/CMakeFiles/glfw.dir/clean
+
+#=============================================================================
+# Target rules for target external/glfw/src/CMakeFiles/update_mappings.dir
+
+# All Build rule for target.
+external/glfw/src/CMakeFiles/update_mappings.dir/all:
+	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/update_mappings.dir/build.make external/glfw/src/CMakeFiles/update_mappings.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/update_mappings.dir/build.make external/glfw/src/CMakeFiles/update_mappings.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/lofi/Desktop/NoodleType/build/CMakeFiles --progress-num=84 "Built target update_mappings"
+.PHONY : external/glfw/src/CMakeFiles/update_mappings.dir/all
+
+# Build rule for subdir invocation for target.
+external/glfw/src/CMakeFiles/update_mappings.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/src/CMakeFiles/update_mappings.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 0
+.PHONY : external/glfw/src/CMakeFiles/update_mappings.dir/rule
+
+# Convenience name for target.
+update_mappings: external/glfw/src/CMakeFiles/update_mappings.dir/rule
+.PHONY : update_mappings
+
+# clean rule for target.
+external/glfw/src/CMakeFiles/update_mappings.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/update_mappings.dir/build.make external/glfw/src/CMakeFiles/update_mappings.dir/clean
+.PHONY : external/glfw/src/CMakeFiles/update_mappings.dir/clean
+
+#=============================================================================
+# Target rules for target external/glew/build/cmake/CMakeFiles/glew.dir
+
+# All Build rule for target.
+external/glew/build/cmake/CMakeFiles/glew.dir/all:
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glew.dir/build.make external/glew/build/cmake/CMakeFiles/glew.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glew.dir/build.make external/glew/build/cmake/CMakeFiles/glew.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/lofi/Desktop/NoodleType/build/CMakeFiles --progress-num=33,34 "Built target glew"
+.PHONY : external/glew/build/cmake/CMakeFiles/glew.dir/all
+
+# Build rule for subdir invocation for target.
+external/glew/build/cmake/CMakeFiles/glew.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glew/build/cmake/CMakeFiles/glew.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 0
+.PHONY : external/glew/build/cmake/CMakeFiles/glew.dir/rule
+
+# Convenience name for target.
+glew: external/glew/build/cmake/CMakeFiles/glew.dir/rule
+.PHONY : glew
+
+# clean rule for target.
+external/glew/build/cmake/CMakeFiles/glew.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glew.dir/build.make external/glew/build/cmake/CMakeFiles/glew.dir/clean
+.PHONY : external/glew/build/cmake/CMakeFiles/glew.dir/clean
+
+#=============================================================================
+# Target rules for target external/glew/build/cmake/CMakeFiles/glew_s.dir
+
+# All Build rule for target.
+external/glew/build/cmake/CMakeFiles/glew_s.dir/all:
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glew_s.dir/build.make external/glew/build/cmake/CMakeFiles/glew_s.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glew_s.dir/build.make external/glew/build/cmake/CMakeFiles/glew_s.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/lofi/Desktop/NoodleType/build/CMakeFiles --progress-num=35,36 "Built target glew_s"
+.PHONY : external/glew/build/cmake/CMakeFiles/glew_s.dir/all
+
+# Build rule for subdir invocation for target.
+external/glew/build/cmake/CMakeFiles/glew_s.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glew/build/cmake/CMakeFiles/glew_s.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 0
+.PHONY : external/glew/build/cmake/CMakeFiles/glew_s.dir/rule
+
+# Convenience name for target.
+glew_s: external/glew/build/cmake/CMakeFiles/glew_s.dir/rule
+.PHONY : glew_s
+
+# clean rule for target.
+external/glew/build/cmake/CMakeFiles/glew_s.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glew_s.dir/build.make external/glew/build/cmake/CMakeFiles/glew_s.dir/clean
+.PHONY : external/glew/build/cmake/CMakeFiles/glew_s.dir/clean
+
+#=============================================================================
+# Target rules for target external/glew/build/cmake/CMakeFiles/glewinfo.dir
+
+# All Build rule for target.
+external/glew/build/cmake/CMakeFiles/glewinfo.dir/all: external/glew/build/cmake/CMakeFiles/glew_s.dir/all
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glewinfo.dir/build.make external/glew/build/cmake/CMakeFiles/glewinfo.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glewinfo.dir/build.make external/glew/build/cmake/CMakeFiles/glewinfo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/lofi/Desktop/NoodleType/build/CMakeFiles --progress-num=37,38 "Built target glewinfo"
+.PHONY : external/glew/build/cmake/CMakeFiles/glewinfo.dir/all
+
+# Build rule for subdir invocation for target.
+external/glew/build/cmake/CMakeFiles/glewinfo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glew/build/cmake/CMakeFiles/glewinfo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 0
+.PHONY : external/glew/build/cmake/CMakeFiles/glewinfo.dir/rule
+
+# Convenience name for target.
+glewinfo: external/glew/build/cmake/CMakeFiles/glewinfo.dir/rule
+.PHONY : glewinfo
+
+# clean rule for target.
+external/glew/build/cmake/CMakeFiles/glewinfo.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glewinfo.dir/build.make external/glew/build/cmake/CMakeFiles/glewinfo.dir/clean
+.PHONY : external/glew/build/cmake/CMakeFiles/glewinfo.dir/clean
+
+#=============================================================================
+# Target rules for target external/glew/build/cmake/CMakeFiles/visualinfo.dir
+
+# All Build rule for target.
+external/glew/build/cmake/CMakeFiles/visualinfo.dir/all: external/glew/build/cmake/CMakeFiles/glew_s.dir/all
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/visualinfo.dir/build.make external/glew/build/cmake/CMakeFiles/visualinfo.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/visualinfo.dir/build.make external/glew/build/cmake/CMakeFiles/visualinfo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/lofi/Desktop/NoodleType/build/CMakeFiles --progress-num=85,86 "Built target visualinfo"
+.PHONY : external/glew/build/cmake/CMakeFiles/visualinfo.dir/all
+
+# Build rule for subdir invocation for target.
+external/glew/build/cmake/CMakeFiles/visualinfo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glew/build/cmake/CMakeFiles/visualinfo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 0
+.PHONY : external/glew/build/cmake/CMakeFiles/visualinfo.dir/rule
+
+# Convenience name for target.
+visualinfo: external/glew/build/cmake/CMakeFiles/visualinfo.dir/rule
+.PHONY : visualinfo
+
+# clean rule for target.
+external/glew/build/cmake/CMakeFiles/visualinfo.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/visualinfo.dir/build.make external/glew/build/cmake/CMakeFiles/visualinfo.dir/clean
+.PHONY : external/glew/build/cmake/CMakeFiles/visualinfo.dir/clean
+
+#=============================================================================
+# Target rules for target external/curlpp/CMakeFiles/curlpp.dir
+
+# All Build rule for target.
+external/curlpp/CMakeFiles/curlpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f external/curlpp/CMakeFiles/curlpp.dir/build.make external/curlpp/CMakeFiles/curlpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/curlpp/CMakeFiles/curlpp.dir/build.make external/curlpp/CMakeFiles/curlpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/lofi/Desktop/NoodleType/build/CMakeFiles --progress-num=9,10,11,12,13,14,15,16,17,18,19,20 "Built target curlpp"
+.PHONY : external/curlpp/CMakeFiles/curlpp.dir/all
+
+# Build rule for subdir invocation for target.
+external/curlpp/CMakeFiles/curlpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/curlpp/CMakeFiles/curlpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 0
+.PHONY : external/curlpp/CMakeFiles/curlpp.dir/rule
+
+# Convenience name for target.
+curlpp: external/curlpp/CMakeFiles/curlpp.dir/rule
+.PHONY : curlpp
+
+# clean rule for target.
+external/curlpp/CMakeFiles/curlpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/curlpp/CMakeFiles/curlpp.dir/build.make external/curlpp/CMakeFiles/curlpp.dir/clean
+.PHONY : external/curlpp/CMakeFiles/curlpp.dir/clean
+
+#=============================================================================
+# Target rules for target external/curlpp/CMakeFiles/curlpp_static.dir
+
+# All Build rule for target.
+external/curlpp/CMakeFiles/curlpp_static.dir/all:
+	$(MAKE) $(MAKESILENT) -f external/curlpp/CMakeFiles/curlpp_static.dir/build.make external/curlpp/CMakeFiles/curlpp_static.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/curlpp/CMakeFiles/curlpp_static.dir/build.make external/curlpp/CMakeFiles/curlpp_static.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/lofi/Desktop/NoodleType/build/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30,31,32 "Built target curlpp_static"
+.PHONY : external/curlpp/CMakeFiles/curlpp_static.dir/all
+
+# Build rule for subdir invocation for target.
+external/curlpp/CMakeFiles/curlpp_static.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/curlpp/CMakeFiles/curlpp_static.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lofi/Desktop/NoodleType/build/CMakeFiles 0
+.PHONY : external/curlpp/CMakeFiles/curlpp_static.dir/rule
+
+# Convenience name for target.
+curlpp_static: external/curlpp/CMakeFiles/curlpp_static.dir/rule
+.PHONY : curlpp_static
+
+# clean rule for target.
+external/curlpp/CMakeFiles/curlpp_static.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/curlpp/CMakeFiles/curlpp_static.dir/build.make external/curlpp/CMakeFiles/curlpp_static.dir/clean
+.PHONY : external/curlpp/CMakeFiles/curlpp_static.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

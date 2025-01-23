@@ -15,11 +15,30 @@ set(SOURCES
 )
 
 find_package(OpenGL REQUIRED)
-find_package(GLEW REQUIRED)
-find_package(glfw3 REQUIRED)
+
+# GLFW
+add_subdirectory(external/glfw)
+include_directories(external/glfw/include)
+
+# GLEW
+add_subdirectory(external/glew/build/cmake)
+include_directories(external/glew/include)
+
+# curlpp
+add_subdirectory(external/curlpp)
+include_directories(external/curlpp/include)
+
+# nlohmann/json
+include_directories(external/json/include)
 
 include_directories(imgui-master imgui-master/backends)
 
 add_executable(NoodleType ${SOURCES})
 
-target_link_libraries(NoodleType ${OPENGL_LIBRARIES} GLEW::GLEW glfw)
+target_link_libraries(NoodleType
+    glfw
+    OpenGL::GL
+    glew 
+    curlpp
+    ${CURL_LIBRARIES}
+)

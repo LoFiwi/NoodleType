@@ -1,82 +1,72 @@
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
-#include <imgui.h>
-#include <imgui_impl_glfw.h>
-#include <imgui_impl_opengl3.h>
+#include <curl/curl.h>
+#include <iostream>
+#include <string>
 
-#include <cstdio>
+// Функція для обробки відповіді від API
+size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* userp) {
+    ((std::string*)userp)->append((char*)contents, size * nmemb);
+    return size * nmemb;
+}
 
-int main(int, char**)
-{
-
-    // testForcommit
-
-    // Ініціалізація GLFW
-    if (!glfwInit())
-        return -1;
-
-    // Створення вікна
-    GLFWwindow* window = glfwCreateWindow(1280, 720, "ImGui Test", NULL, NULL);
-    if (window == NULL)
-        return -1;
-
-    glfwMakeContextCurrent(window);
-    glfwSwapInterval(1); // Вмикає вертикальну синхронізацію
-
-    // Ініціалізація GLEW
-    if (glewInit() != GLEW_OK)
-        return -1;
-
-    // Ініціалізація ImGui
-    IMGUI_CHECKVERSION();
-    ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO(); (void)io;
-
-    // Встановлення стилю ImGui
-    ImGui::StyleColorsDark();
-
-    // Ініціалізація бекендів ImGui
-    ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init("#version 130");
-
-    // Змінна для тесту
-    float slider_value = 0.5f;
-
-    while (!glfwWindowShouldClose(window))
-    {
-        glfwPollEvents();
-
-        // Початок нового ImGui кадру
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplGlfw_NewFrame();
-        ImGui::NewFrame();
-
-        // Ваш GUI код
-        ImGui::Begin("Test Window");
-        ImGui::Text("Welcome to ImGui!");
-        ImGui::SliderFloat("float", &slider_value, 0.0f, 1.0f);
-        ImGui::Text("Current Value: %.3f", slider_value);
-        ImGui::End();
-
-        // Рендеринг
-        ImGui::Render();
-        int display_w, display_h;
-        glfwGetFramebufferSize(window, &display_w, &display_h);
-        glViewport(0, 0, display_w, display_h);
-        glClearColor(0.45f, 0.55f, 0.60f, 1.00f);
-        glClear(GL_COLOR_BUFFER_BIT);
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-
-        glfwSwapBuffers(window);
+class TypingTestAPI {
+public:
+    TypingTestAPI() {
+        curl_global_init(CURL_GLOBAL_DEFAULT);
+        curl = curl_easy_init();
     }
 
-    // Очищення
-    ImGui_ImplOpenGL3_Shutdown();
-    ImGui_ImplGlfw_Shutdown();
-    ImGui::DestroyContext();
+    ~TypingTestAPI() {
+        if (curl) {
+            curl_easy_cleanup(curl);
+        }
+        curl_global_cleanup();
+    }
 
-    glfwDestroyWindow(window);
-    glfwTerminate();
+    bool sendTypingTest(const std::string& url, const std::string& text, std::string& output) {
+        if (!curl) {
+            std::cerr << "CURL initialization failed!" << std::endl;
+            return false;
+        }
+
+        // Додавання параметрів POST запиту
+        struct curl_slist *headers = NULL;
+        headers = curl_slist_append(headers, "Content-Type: application/json");
+
+        // Створюємо JSON дані для тесту
+        std::string json_data = "{\"text\":\"" + text + "\"}";
+
+        // Налаштування CURL для POST запиту
+        curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
+        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, json_data.c_str());
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, &output);
+
+        CURLcode res = curl_easy_perform(curl);
+        if (res != CURLE_OK) {
+            std::cerr << "CURL error: " << curl_easy_strerror(res) << std::endl;
+            return false;
+        }
+        return true;
+    }
+
+private:
+    CURL* curl;
+};
+
+int main() {
+    TypingTestAPI api;
+    std::string output;
+
+    // Приклад API URL для тесту
+    std::string url = "https://www.typingtest.com/"; // Замініть на реальний URL
+    std::string text = "The quick brown fox jumps over the lazy dog.";
+
+    if (api.sendTypingTest(url, text, output)) {
+        std::cout << "Typing Test Result: " << output << std::endl;
+    } else {
+        std::cerr << "Failed to send data to Typing Test API" << std::endl;
+    }
 
     return 0;
 }
