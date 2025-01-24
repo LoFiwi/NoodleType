@@ -1,0 +1,12 @@
+[submodule "external/curlpp"]
+	path = external/curlpp
+	url = https://github.com/jpbarrette/curlpp.git
+[submodule "external/json"]
+	path = external/json
+	url = https://github.com/nlohmann/json.git
+[submodule "external/glfw"]
+	path = external/glfw
+	url = https://github.com/glfw/glfw.git
+[submodule "external/glew"]
+	path = external/glew
+	url = https://github.com/nigels-com/glew.git

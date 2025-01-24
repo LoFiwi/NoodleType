@@ -1,72 +1,110 @@
-#include <curl/curl.h>
-#include <iostream>
-#include <string>
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
 
-// Функція для обробки відповіді від API
-size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* userp) {
-    ((std::string*)userp)->append((char*)contents, size * nmemb);
-    return size * nmemb;
+#include <imgui.h>
+#include <backends/imgui_impl_glfw.h>
+#include <backends/imgui_impl_opengl3.h>
+
+#include <curlpp/cURLpp.hpp>   // Ініціалізація cURLpp
+#include <curlpp/Easy.hpp>    // Для класу Easy
+#include <curlpp/Options.hpp> // Для роботи з параметрами
+
+#include <nlohmann/json.hpp>
+#include <iostream>
+
+void initOpenGL(GLFWwindow*& window) {
+    if (!glfwInit()) {
+        std::cerr << "Failed to initialize GLFW" << std::endl;
+        exit(EXIT_FAILURE);
+    }
+
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+
+    window = glfwCreateWindow(1280, 720, "NoodleType", NULL, NULL);
+    if (window == NULL) {
+        std::cerr << "Failed to create GLFW window" << std::endl;
+        glfwTerminate();
+        exit(EXIT_FAILURE);
+    }
+
+    glfwMakeContextCurrent(window);
+    glfwSwapInterval(1);
+
+    if (glewInit() != GLEW_OK) {
+        std::cerr << "Failed to initialize GLEW" << std::endl;
+        exit(EXIT_FAILURE);
+    }
 }
 
-class TypingTestAPI {
-public:
-    TypingTestAPI() {
-        curl_global_init(CURL_GLOBAL_DEFAULT);
-        curl = curl_easy_init();
+void initImGui(GLFWwindow* window) {
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO();
+    (void)io;
+
+    ImGui::StyleColorsDark();
+    ImGui_ImplGlfw_InitForOpenGL(window, true);
+    ImGui_ImplOpenGL3_Init("#version 130");
+}
+
+void testCurl() {
+    try {
+        curlpp::Cleanup cleanup;
+        curlpp::Easy request;
+        request.setOpt<curlpp::options::Url>("https://api.github.com");
+
+        std::ostringstream response;
+        request.setOpt<curlpp::options::WriteStream>(&response);
+        request.perform();
+
+        std::cout << "Response: " << response.str() << std::endl;
+    } catch (const curlpp::RuntimeError& e) {
+        std::cerr << "cURLpp runtime error: " << e.what() << std::endl;
+    } catch (const curlpp::LogicError& e) {
+        std::cerr << "cURLpp logic error: " << e.what() << std::endl;
     }
+}
 
-    ~TypingTestAPI() {
-        if (curl) {
-            curl_easy_cleanup(curl);
-        }
-        curl_global_cleanup();
+void renderLoop(GLFWwindow* window) {
+    while (!glfwWindowShouldClose(window)) {
+        glfwPollEvents();
+
+        glClearColor(0.45f, 0.55f, 0.60f, 1.00f);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
+
+        ImGui::Begin("Hello, ImGui!");
+        ImGui::Text("This is an example of using ImGui with OpenGL and GLFW!");
+        ImGui::End();
+
+        ImGui::Render();
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
+        glfwSwapBuffers(window);
     }
-
-    bool sendTypingTest(const std::string& url, const std::string& text, std::string& output) {
-        if (!curl) {
-            std::cerr << "CURL initialization failed!" << std::endl;
-            return false;
-        }
-
-        // Додавання параметрів POST запиту
-        struct curl_slist *headers = NULL;
-        headers = curl_slist_append(headers, "Content-Type: application/json");
-
-        // Створюємо JSON дані для тесту
-        std::string json_data = "{\"text\":\"" + text + "\"}";
-
-        // Налаштування CURL для POST запиту
-        curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
-        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
-        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, json_data.c_str());
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
-        curl_easy_setopt(curl, CURLOPT_WRITEDATA, &output);
-
-        CURLcode res = curl_easy_perform(curl);
-        if (res != CURLE_OK) {
-            std::cerr << "CURL error: " << curl_easy_strerror(res) << std::endl;
-            return false;
-        }
-        return true;
-    }
-
-private:
-    CURL* curl;
-};
+}
 
 int main() {
-    TypingTestAPI api;
-    std::string output;
+    GLFWwindow* window;
 
-    // Приклад API URL для тесту
-    std::string url = "https://www.typingtest.com/"; // Замініть на реальний URL
-    std::string text = "The quick brown fox jumps over the lazy dog.";
+    initOpenGL(window);
+    initImGui(window);
 
-    if (api.sendTypingTest(url, text, output)) {
-        std::cout << "Typing Test Result: " << output << std::endl;
-    } else {
-        std::cerr << "Failed to send data to Typing Test API" << std::endl;
-    }
+    std::cout << "Testing cURLpp..." << std::endl;
+    testCurl();
+
+    renderLoop(window);
+
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplGlfw_Shutdown();
+    ImGui::DestroyContext();
+
+    glfwDestroyWindow(window);
+    glfwTerminate();
 
     return 0;
 }

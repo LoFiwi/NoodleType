@@ -4,13 +4,16 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/home/lofi/Desktop/NoodleType/external/json/include"
+                "${workspaceFolder}/external/curlpp/include",
+                "${workspaceFolder}/external/glfw/include",
+                "${workspaceFolder}/external/glew/include",
+                "${workspaceFolder}/external/json/include"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/clang",
-            "cStandard": "c17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "linux-clang-x64"
+            "compilerPath": "/usr/bin/g++",
+            "intelliSenseMode": "gcc-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
         }
     ],
     "version": 4
