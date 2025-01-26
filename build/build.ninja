@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: NoodleType
-# Configurations: 
+# Configurations: Debug
 # =============================================================================
 
 #############################################
@@ -20,6 +20,11 @@
 
 ninja_required_version = 1.5
 
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
 # =============================================================================
 # Include auxiliary files.
 
@@ -44,70 +49,70 @@ cmake_ninja_workdir = /home/lofi/Desktop/NoodleType/build/
 
 build cmake_object_order_depends_target_NoodleType: phony || cmake_object_order_depends_target_curlpp cmake_object_order_depends_target_glew_s cmake_object_order_depends_target_glfw
 
-build CMakeFiles/NoodleType.dir/src/main.cpp.o: CXX_COMPILER__NoodleType_unscanned_ /home/lofi/Desktop/NoodleType/src/main.cpp || cmake_object_order_depends_target_NoodleType
+build CMakeFiles/NoodleType.dir/src/main.cpp.o: CXX_COMPILER__NoodleType_unscanned_Debug /home/lofi/Desktop/NoodleType/src/main.cpp || cmake_object_order_depends_target_NoodleType
   DEFINES = -DGLEW_STATIC
   DEP_FILE = CMakeFiles/NoodleType.dir/src/main.cpp.o.d
-  FLAGS = -std=gnu++17
+  FLAGS = -g -std=gnu++17
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -I/home/lofi/Desktop/NoodleType/external/json/include -I/home/lofi/Desktop/NoodleType/imgui-master -I/home/lofi/Desktop/NoodleType/imgui-master/backends
   OBJECT_DIR = CMakeFiles/NoodleType.dir
   OBJECT_FILE_DIR = CMakeFiles/NoodleType.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/NoodleType.dir/
   TARGET_PDB = NoodleType.pdb
 
-build CMakeFiles/NoodleType.dir/imgui-master/imgui.cpp.o: CXX_COMPILER__NoodleType_unscanned_ /home/lofi/Desktop/NoodleType/imgui-master/imgui.cpp || cmake_object_order_depends_target_NoodleType
+build CMakeFiles/NoodleType.dir/imgui-master/imgui.cpp.o: CXX_COMPILER__NoodleType_unscanned_Debug /home/lofi/Desktop/NoodleType/imgui-master/imgui.cpp || cmake_object_order_depends_target_NoodleType
   DEFINES = -DGLEW_STATIC
   DEP_FILE = CMakeFiles/NoodleType.dir/imgui-master/imgui.cpp.o.d
-  FLAGS = -std=gnu++17
+  FLAGS = -g -std=gnu++17
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -I/home/lofi/Desktop/NoodleType/external/json/include -I/home/lofi/Desktop/NoodleType/imgui-master -I/home/lofi/Desktop/NoodleType/imgui-master/backends
   OBJECT_DIR = CMakeFiles/NoodleType.dir
   OBJECT_FILE_DIR = CMakeFiles/NoodleType.dir/imgui-master
   TARGET_COMPILE_PDB = CMakeFiles/NoodleType.dir/
   TARGET_PDB = NoodleType.pdb
 
-build CMakeFiles/NoodleType.dir/imgui-master/imgui_draw.cpp.o: CXX_COMPILER__NoodleType_unscanned_ /home/lofi/Desktop/NoodleType/imgui-master/imgui_draw.cpp || cmake_object_order_depends_target_NoodleType
+build CMakeFiles/NoodleType.dir/imgui-master/imgui_draw.cpp.o: CXX_COMPILER__NoodleType_unscanned_Debug /home/lofi/Desktop/NoodleType/imgui-master/imgui_draw.cpp || cmake_object_order_depends_target_NoodleType
   DEFINES = -DGLEW_STATIC
   DEP_FILE = CMakeFiles/NoodleType.dir/imgui-master/imgui_draw.cpp.o.d
-  FLAGS = -std=gnu++17
+  FLAGS = -g -std=gnu++17
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -I/home/lofi/Desktop/NoodleType/external/json/include -I/home/lofi/Desktop/NoodleType/imgui-master -I/home/lofi/Desktop/NoodleType/imgui-master/backends
   OBJECT_DIR = CMakeFiles/NoodleType.dir
   OBJECT_FILE_DIR = CMakeFiles/NoodleType.dir/imgui-master
   TARGET_COMPILE_PDB = CMakeFiles/NoodleType.dir/
   TARGET_PDB = NoodleType.pdb
 
-build CMakeFiles/NoodleType.dir/imgui-master/imgui_widgets.cpp.o: CXX_COMPILER__NoodleType_unscanned_ /home/lofi/Desktop/NoodleType/imgui-master/imgui_widgets.cpp || cmake_object_order_depends_target_NoodleType
+build CMakeFiles/NoodleType.dir/imgui-master/imgui_widgets.cpp.o: CXX_COMPILER__NoodleType_unscanned_Debug /home/lofi/Desktop/NoodleType/imgui-master/imgui_widgets.cpp || cmake_object_order_depends_target_NoodleType
   DEFINES = -DGLEW_STATIC
   DEP_FILE = CMakeFiles/NoodleType.dir/imgui-master/imgui_widgets.cpp.o.d
-  FLAGS = -std=gnu++17
+  FLAGS = -g -std=gnu++17
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -I/home/lofi/Desktop/NoodleType/external/json/include -I/home/lofi/Desktop/NoodleType/imgui-master -I/home/lofi/Desktop/NoodleType/imgui-master/backends
   OBJECT_DIR = CMakeFiles/NoodleType.dir
   OBJECT_FILE_DIR = CMakeFiles/NoodleType.dir/imgui-master
   TARGET_COMPILE_PDB = CMakeFiles/NoodleType.dir/
   TARGET_PDB = NoodleType.pdb
 
-build CMakeFiles/NoodleType.dir/imgui-master/imgui_tables.cpp.o: CXX_COMPILER__NoodleType_unscanned_ /home/lofi/Desktop/NoodleType/imgui-master/imgui_tables.cpp || cmake_object_order_depends_target_NoodleType
+build CMakeFiles/NoodleType.dir/imgui-master/imgui_tables.cpp.o: CXX_COMPILER__NoodleType_unscanned_Debug /home/lofi/Desktop/NoodleType/imgui-master/imgui_tables.cpp || cmake_object_order_depends_target_NoodleType
   DEFINES = -DGLEW_STATIC
   DEP_FILE = CMakeFiles/NoodleType.dir/imgui-master/imgui_tables.cpp.o.d
-  FLAGS = -std=gnu++17
+  FLAGS = -g -std=gnu++17
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -I/home/lofi/Desktop/NoodleType/external/json/include -I/home/lofi/Desktop/NoodleType/imgui-master -I/home/lofi/Desktop/NoodleType/imgui-master/backends
   OBJECT_DIR = CMakeFiles/NoodleType.dir
   OBJECT_FILE_DIR = CMakeFiles/NoodleType.dir/imgui-master
   TARGET_COMPILE_PDB = CMakeFiles/NoodleType.dir/
   TARGET_PDB = NoodleType.pdb
 
-build CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_glfw.cpp.o: CXX_COMPILER__NoodleType_unscanned_ /home/lofi/Desktop/NoodleType/imgui-master/backends/imgui_impl_glfw.cpp || cmake_object_order_depends_target_NoodleType
+build CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_glfw.cpp.o: CXX_COMPILER__NoodleType_unscanned_Debug /home/lofi/Desktop/NoodleType/imgui-master/backends/imgui_impl_glfw.cpp || cmake_object_order_depends_target_NoodleType
   DEFINES = -DGLEW_STATIC
   DEP_FILE = CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_glfw.cpp.o.d
-  FLAGS = -std=gnu++17
+  FLAGS = -g -std=gnu++17
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -I/home/lofi/Desktop/NoodleType/external/json/include -I/home/lofi/Desktop/NoodleType/imgui-master -I/home/lofi/Desktop/NoodleType/imgui-master/backends
   OBJECT_DIR = CMakeFiles/NoodleType.dir
   OBJECT_FILE_DIR = CMakeFiles/NoodleType.dir/imgui-master/backends
   TARGET_COMPILE_PDB = CMakeFiles/NoodleType.dir/
   TARGET_PDB = NoodleType.pdb
 
-build CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_opengl3.cpp.o: CXX_COMPILER__NoodleType_unscanned_ /home/lofi/Desktop/NoodleType/imgui-master/backends/imgui_impl_opengl3.cpp || cmake_object_order_depends_target_NoodleType
+build CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_opengl3.cpp.o: CXX_COMPILER__NoodleType_unscanned_Debug /home/lofi/Desktop/NoodleType/imgui-master/backends/imgui_impl_opengl3.cpp || cmake_object_order_depends_target_NoodleType
   DEFINES = -DGLEW_STATIC
   DEP_FILE = CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_opengl3.cpp.o.d
-  FLAGS = -std=gnu++17
+  FLAGS = -g -std=gnu++17
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -I/home/lofi/Desktop/NoodleType/external/json/include -I/home/lofi/Desktop/NoodleType/imgui-master -I/home/lofi/Desktop/NoodleType/imgui-master/backends
   OBJECT_DIR = CMakeFiles/NoodleType.dir
   OBJECT_FILE_DIR = CMakeFiles/NoodleType.dir/imgui-master/backends
@@ -122,8 +127,9 @@ build CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_opengl3.cpp.o: 
 #############################################
 # Link the executable NoodleType
 
-build NoodleType: CXX_EXECUTABLE_LINKER__NoodleType_ CMakeFiles/NoodleType.dir/src/main.cpp.o CMakeFiles/NoodleType.dir/imgui-master/imgui.cpp.o CMakeFiles/NoodleType.dir/imgui-master/imgui_draw.cpp.o CMakeFiles/NoodleType.dir/imgui-master/imgui_widgets.cpp.o CMakeFiles/NoodleType.dir/imgui-master/imgui_tables.cpp.o CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_glfw.cpp.o CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_opengl3.cpp.o | external/glfw/src/libglfw3.a /usr/lib/x86_64-linux-gnu/libGL.so lib/libGLEW.a external/curlpp/libcurlpp.so.1.0.0 /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so /usr/lib/x86_64-linux-gnu/libcurl.so || external/curlpp/libcurlpp.so external/glfw/src/libglfw3.a lib/libGLEW.a external/curlpp/libcurlpp.so
-  LINK_LIBRARIES = -Wl,-rpath,/home/lofi/Desktop/NoodleType/build/external/curlpp  external/glfw/src/libglfw3.a  /usr/lib/x86_64-linux-gnu/libGL.so  lib/libGLEW.a  external/curlpp/libcurlpp.so.1.0.0  /usr/lib/x86_64-linux-gnu/librt.a  -lm  -ldl  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libSM.so  /usr/lib/x86_64-linux-gnu/libICE.so  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so  /usr/lib/x86_64-linux-gnu/libcurl.so
+build NoodleType: CXX_EXECUTABLE_LINKER__NoodleType_Debug CMakeFiles/NoodleType.dir/src/main.cpp.o CMakeFiles/NoodleType.dir/imgui-master/imgui.cpp.o CMakeFiles/NoodleType.dir/imgui-master/imgui_draw.cpp.o CMakeFiles/NoodleType.dir/imgui-master/imgui_widgets.cpp.o CMakeFiles/NoodleType.dir/imgui-master/imgui_tables.cpp.o CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_glfw.cpp.o CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_opengl3.cpp.o | external/glfw/src/libglfw3.a /usr/lib/x86_64-linux-gnu/libGL.so lib/libGLEWd.a external/curlpp/libcurlpp.so.1.0.0 /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so /usr/lib/x86_64-linux-gnu/libcurl.so || external/curlpp/libcurlpp.so external/glfw/src/libglfw3.a lib/libGLEWd.a external/curlpp/libcurlpp.so
+  FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/home/lofi/Desktop/NoodleType/build/external/curlpp  external/glfw/src/libglfw3.a  /usr/lib/x86_64-linux-gnu/libGL.so  lib/libGLEWd.a  external/curlpp/libcurlpp.so.1.0.0  /usr/lib/x86_64-linux-gnu/librt.a  -lm  -ldl  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libSM.so  /usr/lib/x86_64-linux-gnu/libICE.so  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so  /usr/lib/x86_64-linux-gnu/libcurl.so
   OBJECT_DIR = CMakeFiles/NoodleType.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -293,260 +299,260 @@ build external/glfw/CMakeFiles/uninstall | ${cmake_ninja_workdir}external/glfw/C
 
 build cmake_object_order_depends_target_glfw: phony || external/glfw/src/fractional-scale-v1-client-protocol-code.h external/glfw/src/fractional-scale-v1-client-protocol.h external/glfw/src/idle-inhibit-unstable-v1-client-protocol-code.h external/glfw/src/idle-inhibit-unstable-v1-client-protocol.h external/glfw/src/pointer-constraints-unstable-v1-client-protocol-code.h external/glfw/src/pointer-constraints-unstable-v1-client-protocol.h external/glfw/src/relative-pointer-unstable-v1-client-protocol-code.h external/glfw/src/relative-pointer-unstable-v1-client-protocol.h external/glfw/src/viewporter-client-protocol-code.h external/glfw/src/viewporter-client-protocol.h external/glfw/src/wayland-client-protocol-code.h external/glfw/src/wayland-client-protocol.h external/glfw/src/xdg-activation-v1-client-protocol-code.h external/glfw/src/xdg-activation-v1-client-protocol.h external/glfw/src/xdg-decoration-unstable-v1-client-protocol-code.h external/glfw/src/xdg-decoration-unstable-v1-client-protocol.h external/glfw/src/xdg-shell-client-protocol-code.h external/glfw/src/xdg-shell-client-protocol.h
 
-build external/glfw/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/context.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/context.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/init.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/init.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/input.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/input.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/input.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/monitor.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/platform.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/platform.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/platform.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/platform.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/platform.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/window.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/window.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/null_init.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/null_init.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/null_init.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/null_init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/null_init.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/null_monitor.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/null_monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/null_window.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/null_window.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/null_window.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/null_window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/null_window.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/null_joystick.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/null_joystick.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/posix_module.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/posix_module.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/posix_time.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/posix_time.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/posix_thread.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/posix_thread.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/x11_init.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/x11_init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/x11_monitor.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/x11_monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/x11_window.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/x11_window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/xkb_unicode.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/xkb_unicode.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/glx_context.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/glx_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/wl_init.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/wl_init.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/wl_init.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/wl_init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/wl_init.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/wl_monitor.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/wl_monitor.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/wl_monitor.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/wl_monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/wl_monitor.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/wl_window.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/wl_window.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/wl_window.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/wl_window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/wl_window.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/linux_joystick.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/linux_joystick.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
   TARGET_COMPILE_PDB = external/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_PDB = external/glfw/src/libglfw3.pdb
 
-build external/glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o: C_COMPILER__glfw_unscanned_ /home/lofi/Desktop/NoodleType/external/glfw/src/posix_poll.c || cmake_object_order_depends_target_glfw
+build external/glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o: C_COMPILER__glfw_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glfw/src/posix_poll.c || cmake_object_order_depends_target_glfw
   DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
   DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o.d
-  FLAGS = -std=c99 -fPIC -Wall
+  FLAGS = -g -std=c99 -fPIC -Wall
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
@@ -561,7 +567,8 @@ build external/glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o: C_COMPILER__glfw_uns
 #############################################
 # Link the static library external/glfw/src/libglfw3.a
 
-build external/glfw/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_ external/glfw/src/CMakeFiles/glfw.dir/context.c.o external/glfw/src/CMakeFiles/glfw.dir/init.c.o external/glfw/src/CMakeFiles/glfw.dir/input.c.o external/glfw/src/CMakeFiles/glfw.dir/monitor.c.o external/glfw/src/CMakeFiles/glfw.dir/platform.c.o external/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o external/glfw/src/CMakeFiles/glfw.dir/window.c.o external/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o external/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o external/glfw/src/CMakeFiles/glfw.dir/null_init.c.o external/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o external/glfw/src/CMakeFiles/glfw.dir/null_window.c.o external/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o external/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o external/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o external/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o external/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o external/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o external/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o external/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o external/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o external/glfw/src/CMakeFiles/glfw.dir/wl_init.c.o external/glfw/src/CMakeFiles/glfw.dir/wl_monitor.c.o external/glfw/src/CMakeFiles/glfw.dir/wl_window.c.o external/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o external/glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o
+build external/glfw/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Debug external/glfw/src/CMakeFiles/glfw.dir/context.c.o external/glfw/src/CMakeFiles/glfw.dir/init.c.o external/glfw/src/CMakeFiles/glfw.dir/input.c.o external/glfw/src/CMakeFiles/glfw.dir/monitor.c.o external/glfw/src/CMakeFiles/glfw.dir/platform.c.o external/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o external/glfw/src/CMakeFiles/glfw.dir/window.c.o external/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o external/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o external/glfw/src/CMakeFiles/glfw.dir/null_init.c.o external/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o external/glfw/src/CMakeFiles/glfw.dir/null_window.c.o external/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o external/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o external/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o external/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o external/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o external/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o external/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o external/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o external/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o external/glfw/src/CMakeFiles/glfw.dir/wl_init.c.o external/glfw/src/CMakeFiles/glfw.dir/wl_monitor.c.o external/glfw/src/CMakeFiles/glfw.dir/wl_window.c.o external/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o external/glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o
+  LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -894,15 +901,15 @@ build external/glfw/docs/install/strip: phony external/glfw/docs/CMakeFiles/inst
 
 build cmake_object_order_depends_target_glew: phony || .
 
-build external/glew/build/cmake/CMakeFiles/glew.dir/__/__/src/glew.c.o: C_COMPILER__glew_unscanned_ /home/lofi/Desktop/NoodleType/external/glew/src/glew.c || cmake_object_order_depends_target_glew
+build external/glew/build/cmake/CMakeFiles/glew.dir/__/__/src/glew.c.o: C_COMPILER__glew_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glew/src/glew.c || cmake_object_order_depends_target_glew
   DEFINES = -DGLEW_BUILD -DGLEW_NO_GLU -Dglew_EXPORTS
   DEP_FILE = external/glew/build/cmake/CMakeFiles/glew.dir/__/__/src/glew.c.o.d
-  FLAGS = -fPIC
+  FLAGS = -g -fPIC
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glew/build/cmake/../../include
   OBJECT_DIR = external/glew/build/cmake/CMakeFiles/glew.dir
   OBJECT_FILE_DIR = external/glew/build/cmake/CMakeFiles/glew.dir/__/__/src
   TARGET_COMPILE_PDB = external/glew/build/cmake/CMakeFiles/glew.dir/
-  TARGET_PDB = lib/libGLEW.pdb
+  TARGET_PDB = lib/libGLEWd.pdb
 
 
 # =============================================================================
@@ -910,25 +917,26 @@ build external/glew/build/cmake/CMakeFiles/glew.dir/__/__/src/glew.c.o: C_COMPIL
 
 
 #############################################
-# Link the shared library lib/libGLEW.so.2.2.0
+# Link the shared library lib/libGLEWd.so.2.2.0
 
-build lib/libGLEW.so.2.2.0: C_SHARED_LIBRARY_LINKER__glew_ external/glew/build/cmake/CMakeFiles/glew.dir/__/__/src/glew.c.o | /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so
+build lib/libGLEWd.so.2.2.0: C_SHARED_LIBRARY_LINKER__glew_Debug external/glew/build/cmake/CMakeFiles/glew.dir/__/__/src/glew.c.o | /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so
+  LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libSM.so  /usr/lib/x86_64-linux-gnu/libICE.so  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so
   OBJECT_DIR = external/glew/build/cmake/CMakeFiles/glew.dir
   POST_BUILD = :
   PRE_LINK = :
-  SONAME = libGLEW.so.2.2
+  SONAME = libGLEWd.so.2.2
   SONAME_FLAG = -Wl,-soname,
   TARGET_COMPILE_PDB = external/glew/build/cmake/CMakeFiles/glew.dir/
-  TARGET_FILE = lib/libGLEW.so.2.2.0
+  TARGET_FILE = lib/libGLEWd.so.2.2.0
   TARGET_IMPLIB = lib/
-  TARGET_PDB = lib/libGLEW.pdb
+  TARGET_PDB = lib/libGLEWd.pdb
 
 
 #############################################
-# Create library symlink lib/libGLEW.so
+# Create library symlink lib/libGLEWd.so
 
-build lib/libGLEW.so.2.2 lib/libGLEW.so: CMAKE_SYMLINK_LIBRARY lib/libGLEW.so.2.2.0
+build lib/libGLEWd.so.2.2 lib/libGLEWd.so: CMAKE_SYMLINK_LIBRARY lib/libGLEWd.so.2.2.0
   POST_BUILD = :
 
 # =============================================================================
@@ -940,14 +948,15 @@ build lib/libGLEW.so.2.2 lib/libGLEW.so: CMAKE_SYMLINK_LIBRARY lib/libGLEW.so.2.
 
 build cmake_object_order_depends_target_glew_s: phony || .
 
-build external/glew/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.o: C_COMPILER__glew_s_unscanned_ /home/lofi/Desktop/NoodleType/external/glew/src/glew.c || cmake_object_order_depends_target_glew_s
+build external/glew/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.o: C_COMPILER__glew_s_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glew/src/glew.c || cmake_object_order_depends_target_glew_s
   DEFINES = -DGLEW_NO_GLU -DGLEW_STATIC
   DEP_FILE = external/glew/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.o.d
+  FLAGS = -g
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glew/build/cmake/../../include
   OBJECT_DIR = external/glew/build/cmake/CMakeFiles/glew_s.dir
   OBJECT_FILE_DIR = external/glew/build/cmake/CMakeFiles/glew_s.dir/__/__/src
   TARGET_COMPILE_PDB = external/glew/build/cmake/CMakeFiles/glew_s.dir/glew_s.pdb
-  TARGET_PDB = lib/libGLEW.pdb
+  TARGET_PDB = lib/libGLEWd.pdb
 
 
 # =============================================================================
@@ -955,15 +964,16 @@ build external/glew/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.o: C_COMP
 
 
 #############################################
-# Link the static library lib/libGLEW.a
+# Link the static library lib/libGLEWd.a
 
-build lib/libGLEW.a: C_STATIC_LIBRARY_LINKER__glew_s_ external/glew/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.o
+build lib/libGLEWd.a: C_STATIC_LIBRARY_LINKER__glew_s_Debug external/glew/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.o
+  LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = external/glew/build/cmake/CMakeFiles/glew_s.dir
   POST_BUILD = :
   PRE_LINK = :
   TARGET_COMPILE_PDB = external/glew/build/cmake/CMakeFiles/glew_s.dir/glew_s.pdb
-  TARGET_FILE = lib/libGLEW.a
-  TARGET_PDB = lib/libGLEW.pdb
+  TARGET_FILE = lib/libGLEWd.a
+  TARGET_PDB = lib/libGLEWd.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target glewinfo
@@ -974,9 +984,10 @@ build lib/libGLEW.a: C_STATIC_LIBRARY_LINKER__glew_s_ external/glew/build/cmake/
 
 build cmake_object_order_depends_target_glewinfo: phony || cmake_object_order_depends_target_glew_s
 
-build external/glew/build/cmake/CMakeFiles/glewinfo.dir/__/__/src/glewinfo.c.o: C_COMPILER__glewinfo_unscanned_ /home/lofi/Desktop/NoodleType/external/glew/src/glewinfo.c || cmake_object_order_depends_target_glewinfo
+build external/glew/build/cmake/CMakeFiles/glewinfo.dir/__/__/src/glewinfo.c.o: C_COMPILER__glewinfo_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glew/src/glewinfo.c || cmake_object_order_depends_target_glewinfo
   DEFINES = -DGLEW_NO_GLU -DGLEW_STATIC
   DEP_FILE = external/glew/build/cmake/CMakeFiles/glewinfo.dir/__/__/src/glewinfo.c.o.d
+  FLAGS = -g
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glew/build/cmake/../../include
   OBJECT_DIR = external/glew/build/cmake/CMakeFiles/glewinfo.dir
   OBJECT_FILE_DIR = external/glew/build/cmake/CMakeFiles/glewinfo.dir/__/__/src
@@ -991,8 +1002,9 @@ build external/glew/build/cmake/CMakeFiles/glewinfo.dir/__/__/src/glewinfo.c.o: 
 #############################################
 # Link the executable bin/glewinfo
 
-build bin/glewinfo: C_EXECUTABLE_LINKER__glewinfo_ external/glew/build/cmake/CMakeFiles/glewinfo.dir/__/__/src/glewinfo.c.o | lib/libGLEW.a /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so || lib/libGLEW.a
-  LINK_LIBRARIES = lib/libGLEW.a  /usr/lib/x86_64-linux-gnu/libSM.so  /usr/lib/x86_64-linux-gnu/libICE.so  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libSM.so  /usr/lib/x86_64-linux-gnu/libICE.so  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so
+build bin/glewinfo: C_EXECUTABLE_LINKER__glewinfo_Debug external/glew/build/cmake/CMakeFiles/glewinfo.dir/__/__/src/glewinfo.c.o | lib/libGLEWd.a /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so || lib/libGLEWd.a
+  FLAGS = -g
+  LINK_LIBRARIES = lib/libGLEWd.a  /usr/lib/x86_64-linux-gnu/libSM.so  /usr/lib/x86_64-linux-gnu/libICE.so  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libSM.so  /usr/lib/x86_64-linux-gnu/libICE.so  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so
   OBJECT_DIR = external/glew/build/cmake/CMakeFiles/glewinfo.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -1009,9 +1021,10 @@ build bin/glewinfo: C_EXECUTABLE_LINKER__glewinfo_ external/glew/build/cmake/CMa
 
 build cmake_object_order_depends_target_visualinfo: phony || cmake_object_order_depends_target_glew_s
 
-build external/glew/build/cmake/CMakeFiles/visualinfo.dir/__/__/src/visualinfo.c.o: C_COMPILER__visualinfo_unscanned_ /home/lofi/Desktop/NoodleType/external/glew/src/visualinfo.c || cmake_object_order_depends_target_visualinfo
+build external/glew/build/cmake/CMakeFiles/visualinfo.dir/__/__/src/visualinfo.c.o: C_COMPILER__visualinfo_unscanned_Debug /home/lofi/Desktop/NoodleType/external/glew/src/visualinfo.c || cmake_object_order_depends_target_visualinfo
   DEFINES = -DGLEW_NO_GLU -DGLEW_STATIC
   DEP_FILE = external/glew/build/cmake/CMakeFiles/visualinfo.dir/__/__/src/visualinfo.c.o.d
+  FLAGS = -g
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glew/build/cmake/../../include
   OBJECT_DIR = external/glew/build/cmake/CMakeFiles/visualinfo.dir
   OBJECT_FILE_DIR = external/glew/build/cmake/CMakeFiles/visualinfo.dir/__/__/src
@@ -1026,8 +1039,9 @@ build external/glew/build/cmake/CMakeFiles/visualinfo.dir/__/__/src/visualinfo.c
 #############################################
 # Link the executable bin/visualinfo
 
-build bin/visualinfo: C_EXECUTABLE_LINKER__visualinfo_ external/glew/build/cmake/CMakeFiles/visualinfo.dir/__/__/src/visualinfo.c.o | lib/libGLEW.a /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so || lib/libGLEW.a
-  LINK_LIBRARIES = lib/libGLEW.a  /usr/lib/x86_64-linux-gnu/libSM.so  /usr/lib/x86_64-linux-gnu/libICE.so  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libSM.so  /usr/lib/x86_64-linux-gnu/libICE.so  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so
+build bin/visualinfo: C_EXECUTABLE_LINKER__visualinfo_Debug external/glew/build/cmake/CMakeFiles/visualinfo.dir/__/__/src/visualinfo.c.o | lib/libGLEWd.a /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so || lib/libGLEWd.a
+  FLAGS = -g
+  LINK_LIBRARIES = lib/libGLEWd.a  /usr/lib/x86_64-linux-gnu/libSM.so  /usr/lib/x86_64-linux-gnu/libICE.so  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libSM.so  /usr/lib/x86_64-linux-gnu/libICE.so  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so
   OBJECT_DIR = external/glew/build/cmake/CMakeFiles/visualinfo.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -1114,110 +1128,110 @@ build external/glew/build/cmake/install/strip: phony external/glew/build/cmake/C
 
 build cmake_object_order_depends_target_curlpp: phony || .
 
-build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Easy.cpp.o: CXX_COMPILER__curlpp_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Easy.cpp || cmake_object_order_depends_target_curlpp
+build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Easy.cpp.o: CXX_COMPILER__curlpp_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Easy.cpp || cmake_object_order_depends_target_curlpp
   DEFINES = -Dcurlpp_EXPORTS
   DEP_FILE = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Easy.cpp.o.d
-  FLAGS = -std=c++11 -fPIC
+  FLAGS = -g -std=c++11 -fPIC
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp.dir/
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Exception.cpp.o: CXX_COMPILER__curlpp_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Exception.cpp || cmake_object_order_depends_target_curlpp
+build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Exception.cpp.o: CXX_COMPILER__curlpp_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Exception.cpp || cmake_object_order_depends_target_curlpp
   DEFINES = -Dcurlpp_EXPORTS
   DEP_FILE = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Exception.cpp.o.d
-  FLAGS = -std=c++11 -fPIC
+  FLAGS = -g -std=c++11 -fPIC
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp.dir/
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Form.cpp.o: CXX_COMPILER__curlpp_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Form.cpp || cmake_object_order_depends_target_curlpp
+build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Form.cpp.o: CXX_COMPILER__curlpp_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Form.cpp || cmake_object_order_depends_target_curlpp
   DEFINES = -Dcurlpp_EXPORTS
   DEP_FILE = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Form.cpp.o.d
-  FLAGS = -std=c++11 -fPIC
+  FLAGS = -g -std=c++11 -fPIC
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp.dir/
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Multi.cpp.o: CXX_COMPILER__curlpp_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Multi.cpp || cmake_object_order_depends_target_curlpp
+build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Multi.cpp.o: CXX_COMPILER__curlpp_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Multi.cpp || cmake_object_order_depends_target_curlpp
   DEFINES = -Dcurlpp_EXPORTS
   DEP_FILE = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Multi.cpp.o.d
-  FLAGS = -std=c++11 -fPIC
+  FLAGS = -g -std=c++11 -fPIC
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp.dir/
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/OptionBase.cpp.o: CXX_COMPILER__curlpp_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/OptionBase.cpp || cmake_object_order_depends_target_curlpp
+build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/OptionBase.cpp.o: CXX_COMPILER__curlpp_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/OptionBase.cpp || cmake_object_order_depends_target_curlpp
   DEFINES = -Dcurlpp_EXPORTS
   DEP_FILE = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/OptionBase.cpp.o.d
-  FLAGS = -std=c++11 -fPIC
+  FLAGS = -g -std=c++11 -fPIC
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp.dir/
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Options.cpp.o: CXX_COMPILER__curlpp_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Options.cpp || cmake_object_order_depends_target_curlpp
+build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Options.cpp.o: CXX_COMPILER__curlpp_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Options.cpp || cmake_object_order_depends_target_curlpp
   DEFINES = -Dcurlpp_EXPORTS
   DEP_FILE = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Options.cpp.o.d
-  FLAGS = -std=c++11 -fPIC
+  FLAGS = -g -std=c++11 -fPIC
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp.dir/
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/cURLpp.cpp.o: CXX_COMPILER__curlpp_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/cURLpp.cpp || cmake_object_order_depends_target_curlpp
+build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/cURLpp.cpp.o: CXX_COMPILER__curlpp_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/cURLpp.cpp || cmake_object_order_depends_target_curlpp
   DEFINES = -Dcurlpp_EXPORTS
   DEP_FILE = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/cURLpp.cpp.o.d
-  FLAGS = -std=c++11 -fPIC
+  FLAGS = -g -std=c++11 -fPIC
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp.dir/
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/CurlHandle.cpp.o: CXX_COMPILER__curlpp_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/CurlHandle.cpp || cmake_object_order_depends_target_curlpp
+build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/CurlHandle.cpp.o: CXX_COMPILER__curlpp_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/CurlHandle.cpp || cmake_object_order_depends_target_curlpp
   DEFINES = -Dcurlpp_EXPORTS
   DEP_FILE = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/CurlHandle.cpp.o.d
-  FLAGS = -std=c++11 -fPIC
+  FLAGS = -g -std=c++11 -fPIC
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp.dir/
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/OptionList.cpp.o: CXX_COMPILER__curlpp_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/OptionList.cpp || cmake_object_order_depends_target_curlpp
+build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/OptionList.cpp.o: CXX_COMPILER__curlpp_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/OptionList.cpp || cmake_object_order_depends_target_curlpp
   DEFINES = -Dcurlpp_EXPORTS
   DEP_FILE = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/OptionList.cpp.o.d
-  FLAGS = -std=c++11 -fPIC
+  FLAGS = -g -std=c++11 -fPIC
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp.dir/
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/OptionSetter.cpp.o: CXX_COMPILER__curlpp_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/OptionSetter.cpp || cmake_object_order_depends_target_curlpp
+build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/OptionSetter.cpp.o: CXX_COMPILER__curlpp_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/OptionSetter.cpp || cmake_object_order_depends_target_curlpp
   DEFINES = -Dcurlpp_EXPORTS
   DEP_FILE = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/OptionSetter.cpp.o.d
-  FLAGS = -std=c++11 -fPIC
+  FLAGS = -g -std=c++11 -fPIC
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp.dir/
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/SList.cpp.o: CXX_COMPILER__curlpp_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/SList.cpp || cmake_object_order_depends_target_curlpp
+build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/SList.cpp.o: CXX_COMPILER__curlpp_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/SList.cpp || cmake_object_order_depends_target_curlpp
   DEFINES = -Dcurlpp_EXPORTS
   DEP_FILE = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/SList.cpp.o.d
-  FLAGS = -std=c++11 -fPIC
+  FLAGS = -g -std=c++11 -fPIC
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal
@@ -1232,7 +1246,8 @@ build external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/SList.cpp.o: CXX
 #############################################
 # Link the shared library external/curlpp/libcurlpp.so.1.0.0
 
-build external/curlpp/libcurlpp.so.1.0.0: CXX_SHARED_LIBRARY_LINKER__curlpp_ external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Easy.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Exception.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Form.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Multi.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/OptionBase.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Options.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/cURLpp.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/CurlHandle.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/OptionList.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/OptionSetter.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/SList.cpp.o | /usr/lib/x86_64-linux-gnu/libcurl.so
+build external/curlpp/libcurlpp.so.1.0.0: CXX_SHARED_LIBRARY_LINKER__curlpp_Debug external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Easy.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Exception.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Form.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Multi.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/OptionBase.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Options.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/cURLpp.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/CurlHandle.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/OptionList.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/OptionSetter.cpp.o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/SList.cpp.o | /usr/lib/x86_64-linux-gnu/libcurl.so
+  LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libcurl.so
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp.dir
   POST_BUILD = :
@@ -1260,99 +1275,99 @@ build external/curlpp/libcurlpp.so.1 external/curlpp/libcurlpp.so: CMAKE_SYMLINK
 
 build cmake_object_order_depends_target_curlpp_static: phony || .
 
-build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Easy.cpp.o: CXX_COMPILER__curlpp_static_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Easy.cpp || cmake_object_order_depends_target_curlpp_static
+build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Easy.cpp.o: CXX_COMPILER__curlpp_static_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Easy.cpp || cmake_object_order_depends_target_curlpp_static
   DEP_FILE = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Easy.cpp.o.d
-  FLAGS = -std=c++11
+  FLAGS = -g -std=c++11
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp_static.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp_static.dir/curlpp_static.pdb
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Exception.cpp.o: CXX_COMPILER__curlpp_static_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Exception.cpp || cmake_object_order_depends_target_curlpp_static
+build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Exception.cpp.o: CXX_COMPILER__curlpp_static_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Exception.cpp || cmake_object_order_depends_target_curlpp_static
   DEP_FILE = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Exception.cpp.o.d
-  FLAGS = -std=c++11
+  FLAGS = -g -std=c++11
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp_static.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp_static.dir/curlpp_static.pdb
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Form.cpp.o: CXX_COMPILER__curlpp_static_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Form.cpp || cmake_object_order_depends_target_curlpp_static
+build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Form.cpp.o: CXX_COMPILER__curlpp_static_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Form.cpp || cmake_object_order_depends_target_curlpp_static
   DEP_FILE = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Form.cpp.o.d
-  FLAGS = -std=c++11
+  FLAGS = -g -std=c++11
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp_static.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp_static.dir/curlpp_static.pdb
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Multi.cpp.o: CXX_COMPILER__curlpp_static_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Multi.cpp || cmake_object_order_depends_target_curlpp_static
+build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Multi.cpp.o: CXX_COMPILER__curlpp_static_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Multi.cpp || cmake_object_order_depends_target_curlpp_static
   DEP_FILE = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Multi.cpp.o.d
-  FLAGS = -std=c++11
+  FLAGS = -g -std=c++11
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp_static.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp_static.dir/curlpp_static.pdb
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/OptionBase.cpp.o: CXX_COMPILER__curlpp_static_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/OptionBase.cpp || cmake_object_order_depends_target_curlpp_static
+build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/OptionBase.cpp.o: CXX_COMPILER__curlpp_static_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/OptionBase.cpp || cmake_object_order_depends_target_curlpp_static
   DEP_FILE = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/OptionBase.cpp.o.d
-  FLAGS = -std=c++11
+  FLAGS = -g -std=c++11
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp_static.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp_static.dir/curlpp_static.pdb
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Options.cpp.o: CXX_COMPILER__curlpp_static_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Options.cpp || cmake_object_order_depends_target_curlpp_static
+build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Options.cpp.o: CXX_COMPILER__curlpp_static_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Options.cpp || cmake_object_order_depends_target_curlpp_static
   DEP_FILE = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Options.cpp.o.d
-  FLAGS = -std=c++11
+  FLAGS = -g -std=c++11
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp_static.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp_static.dir/curlpp_static.pdb
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/cURLpp.cpp.o: CXX_COMPILER__curlpp_static_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/cURLpp.cpp || cmake_object_order_depends_target_curlpp_static
+build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/cURLpp.cpp.o: CXX_COMPILER__curlpp_static_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/cURLpp.cpp || cmake_object_order_depends_target_curlpp_static
   DEP_FILE = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/cURLpp.cpp.o.d
-  FLAGS = -std=c++11
+  FLAGS = -g -std=c++11
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp_static.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp_static.dir/curlpp_static.pdb
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/CurlHandle.cpp.o: CXX_COMPILER__curlpp_static_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/CurlHandle.cpp || cmake_object_order_depends_target_curlpp_static
+build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/CurlHandle.cpp.o: CXX_COMPILER__curlpp_static_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/CurlHandle.cpp || cmake_object_order_depends_target_curlpp_static
   DEP_FILE = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/CurlHandle.cpp.o.d
-  FLAGS = -std=c++11
+  FLAGS = -g -std=c++11
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp_static.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp_static.dir/curlpp_static.pdb
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/OptionList.cpp.o: CXX_COMPILER__curlpp_static_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/OptionList.cpp || cmake_object_order_depends_target_curlpp_static
+build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/OptionList.cpp.o: CXX_COMPILER__curlpp_static_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/OptionList.cpp || cmake_object_order_depends_target_curlpp_static
   DEP_FILE = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/OptionList.cpp.o.d
-  FLAGS = -std=c++11
+  FLAGS = -g -std=c++11
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp_static.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp_static.dir/curlpp_static.pdb
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/OptionSetter.cpp.o: CXX_COMPILER__curlpp_static_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/OptionSetter.cpp || cmake_object_order_depends_target_curlpp_static
+build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/OptionSetter.cpp.o: CXX_COMPILER__curlpp_static_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/OptionSetter.cpp || cmake_object_order_depends_target_curlpp_static
   DEP_FILE = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/OptionSetter.cpp.o.d
-  FLAGS = -std=c++11
+  FLAGS = -g -std=c++11
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp_static.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal
   TARGET_COMPILE_PDB = external/curlpp/CMakeFiles/curlpp_static.dir/curlpp_static.pdb
   TARGET_PDB = external/curlpp/libcurlpp.pdb
 
-build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/SList.cpp.o: CXX_COMPILER__curlpp_static_unscanned_ /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/SList.cpp || cmake_object_order_depends_target_curlpp_static
+build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/SList.cpp.o: CXX_COMPILER__curlpp_static_unscanned_Debug /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/SList.cpp || cmake_object_order_depends_target_curlpp_static
   DEP_FILE = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/SList.cpp.o.d
-  FLAGS = -std=c++11
+  FLAGS = -g -std=c++11
   INCLUDES = -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp_static.dir
   OBJECT_FILE_DIR = external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal
@@ -1367,7 +1382,8 @@ build external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/SList.cpp
 #############################################
 # Link the static library external/curlpp/libcurlpp.a
 
-build external/curlpp/libcurlpp.a: CXX_STATIC_LIBRARY_LINKER__curlpp_static_ external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Easy.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Exception.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Form.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Multi.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/OptionBase.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Options.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/cURLpp.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/CurlHandle.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/OptionList.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/OptionSetter.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/SList.cpp.o
+build external/curlpp/libcurlpp.a: CXX_STATIC_LIBRARY_LINKER__curlpp_static_Debug external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Easy.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Exception.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Form.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Multi.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/OptionBase.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Options.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/cURLpp.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/CurlHandle.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/OptionList.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/OptionSetter.cpp.o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/SList.cpp.o
+  LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = external/curlpp/CMakeFiles/curlpp_static.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -1517,17 +1533,17 @@ build curlpp: phony external/curlpp/libcurlpp.so
 
 build curlpp_static: phony external/curlpp/libcurlpp.a
 
-build glew: phony lib/libGLEW.so
+build glew: phony lib/libGLEWd.so
 
-build glew_s: phony lib/libGLEW.a
+build glew_s: phony lib/libGLEWd.a
 
 build glewinfo: phony bin/glewinfo
 
 build glfw: phony external/glfw/src/libglfw3.a
 
-build libGLEW.a: phony lib/libGLEW.a
+build libGLEWd.a: phony lib/libGLEWd.a
 
-build libGLEW.so: phony lib/libGLEW.so
+build libGLEWd.so: phony lib/libGLEWd.so
 
 build libcurlpp.a: phony external/curlpp/libcurlpp.a
 
@@ -1570,7 +1586,7 @@ build external/curlpp/extras/all: phony
 #############################################
 # Folder: /home/lofi/Desktop/NoodleType/build/external/glew/build/cmake
 
-build external/glew/build/cmake/all: phony lib/libGLEW.so lib/libGLEW.a bin/glewinfo bin/visualinfo
+build external/glew/build/cmake/all: phony lib/libGLEWd.so lib/libGLEWd.a bin/glewinfo bin/visualinfo
 
 # =============================================================================
 

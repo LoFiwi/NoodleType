@@ -1,0 +1,356 @@
+[
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -DGLEW_STATIC -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -I/home/lofi/Desktop/NoodleType/external/json/include -I/home/lofi/Desktop/NoodleType/imgui-master -I/home/lofi/Desktop/NoodleType/imgui-master/backends -g -std=gnu++17 -o CMakeFiles/NoodleType.dir/src/main.cpp.o -c /home/lofi/Desktop/NoodleType/src/main.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/src/main.cpp",
+  "output": "CMakeFiles/NoodleType.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -DGLEW_STATIC -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -I/home/lofi/Desktop/NoodleType/external/json/include -I/home/lofi/Desktop/NoodleType/imgui-master -I/home/lofi/Desktop/NoodleType/imgui-master/backends -g -std=gnu++17 -o CMakeFiles/NoodleType.dir/imgui-master/imgui.cpp.o -c /home/lofi/Desktop/NoodleType/imgui-master/imgui.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/imgui-master/imgui.cpp",
+  "output": "CMakeFiles/NoodleType.dir/imgui-master/imgui.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -DGLEW_STATIC -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -I/home/lofi/Desktop/NoodleType/external/json/include -I/home/lofi/Desktop/NoodleType/imgui-master -I/home/lofi/Desktop/NoodleType/imgui-master/backends -g -std=gnu++17 -o CMakeFiles/NoodleType.dir/imgui-master/imgui_draw.cpp.o -c /home/lofi/Desktop/NoodleType/imgui-master/imgui_draw.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/imgui-master/imgui_draw.cpp",
+  "output": "CMakeFiles/NoodleType.dir/imgui-master/imgui_draw.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -DGLEW_STATIC -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -I/home/lofi/Desktop/NoodleType/external/json/include -I/home/lofi/Desktop/NoodleType/imgui-master -I/home/lofi/Desktop/NoodleType/imgui-master/backends -g -std=gnu++17 -o CMakeFiles/NoodleType.dir/imgui-master/imgui_widgets.cpp.o -c /home/lofi/Desktop/NoodleType/imgui-master/imgui_widgets.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/imgui-master/imgui_widgets.cpp",
+  "output": "CMakeFiles/NoodleType.dir/imgui-master/imgui_widgets.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -DGLEW_STATIC -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -I/home/lofi/Desktop/NoodleType/external/json/include -I/home/lofi/Desktop/NoodleType/imgui-master -I/home/lofi/Desktop/NoodleType/imgui-master/backends -g -std=gnu++17 -o CMakeFiles/NoodleType.dir/imgui-master/imgui_tables.cpp.o -c /home/lofi/Desktop/NoodleType/imgui-master/imgui_tables.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/imgui-master/imgui_tables.cpp",
+  "output": "CMakeFiles/NoodleType.dir/imgui-master/imgui_tables.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -DGLEW_STATIC -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -I/home/lofi/Desktop/NoodleType/external/json/include -I/home/lofi/Desktop/NoodleType/imgui-master -I/home/lofi/Desktop/NoodleType/imgui-master/backends -g -std=gnu++17 -o CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_glfw.cpp.o -c /home/lofi/Desktop/NoodleType/imgui-master/backends/imgui_impl_glfw.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/imgui-master/backends/imgui_impl_glfw.cpp",
+  "output": "CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_glfw.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -DGLEW_STATIC -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -I/home/lofi/Desktop/NoodleType/external/json/include -I/home/lofi/Desktop/NoodleType/imgui-master -I/home/lofi/Desktop/NoodleType/imgui-master/backends -g -std=gnu++17 -o CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_opengl3.cpp.o -c /home/lofi/Desktop/NoodleType/imgui-master/backends/imgui_impl_opengl3.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/imgui-master/backends/imgui_impl_opengl3.cpp",
+  "output": "CMakeFiles/NoodleType.dir/imgui-master/backends/imgui_impl_opengl3.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/context.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/context.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/context.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/context.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/init.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/init.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/init.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/init.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/input.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/input.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/input.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/input.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/monitor.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/monitor.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/monitor.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/monitor.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/platform.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/platform.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/platform.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/platform.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/vulkan.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/vulkan.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/window.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/window.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/window.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/window.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/egl_context.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/egl_context.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/osmesa_context.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/osmesa_context.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/null_init.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/null_init.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/null_init.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/null_init.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/null_monitor.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/null_monitor.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/null_window.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/null_window.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/null_window.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/null_window.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/null_joystick.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/null_joystick.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/posix_module.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/posix_module.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/posix_time.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/posix_time.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/posix_thread.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/posix_thread.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/x11_init.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/x11_init.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/x11_monitor.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/x11_monitor.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/x11_window.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/x11_window.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/xkb_unicode.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/xkb_unicode.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/glx_context.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/glx_context.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/wl_init.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/wl_init.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/wl_init.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/wl_init.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/wl_monitor.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/wl_monitor.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/wl_monitor.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/wl_monitor.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/wl_window.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/wl_window.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/wl_window.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/wl_window.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/linux_joystick.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/linux_joystick.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glfw/src -I/home/lofi/Desktop/NoodleType/build/external/glfw/src -g -std=c99 -fPIC -Wall -o external/glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o -c /home/lofi/Desktop/NoodleType/external/glfw/src/posix_poll.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glfw/src/posix_poll.c",
+  "output": "external/glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DGLEW_BUILD -DGLEW_NO_GLU -Dglew_EXPORTS -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glew/build/cmake/../../include -g -fPIC -o external/glew/build/cmake/CMakeFiles/glew.dir/__/__/src/glew.c.o -c /home/lofi/Desktop/NoodleType/external/glew/src/glew.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glew/src/glew.c",
+  "output": "external/glew/build/cmake/CMakeFiles/glew.dir/__/__/src/glew.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DGLEW_NO_GLU -DGLEW_STATIC -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glew/build/cmake/../../include -g -o external/glew/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.o -c /home/lofi/Desktop/NoodleType/external/glew/src/glew.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glew/src/glew.c",
+  "output": "external/glew/build/cmake/CMakeFiles/glew_s.dir/__/__/src/glew.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DGLEW_NO_GLU -DGLEW_STATIC -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glew/build/cmake/../../include -g -o external/glew/build/cmake/CMakeFiles/glewinfo.dir/__/__/src/glewinfo.c.o -c /home/lofi/Desktop/NoodleType/external/glew/src/glewinfo.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glew/src/glewinfo.c",
+  "output": "external/glew/build/cmake/CMakeFiles/glewinfo.dir/__/__/src/glewinfo.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang-17 -DGLEW_NO_GLU -DGLEW_STATIC -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/glew/build/cmake/../../include -g -o external/glew/build/cmake/CMakeFiles/visualinfo.dir/__/__/src/visualinfo.c.o -c /home/lofi/Desktop/NoodleType/external/glew/src/visualinfo.c",
+  "file": "/home/lofi/Desktop/NoodleType/external/glew/src/visualinfo.c",
+  "output": "external/glew/build/cmake/CMakeFiles/visualinfo.dir/__/__/src/visualinfo.c.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -Dcurlpp_EXPORTS -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -fPIC -o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Easy.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Easy.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Easy.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Easy.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -Dcurlpp_EXPORTS -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -fPIC -o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Exception.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Exception.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Exception.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Exception.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -Dcurlpp_EXPORTS -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -fPIC -o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Form.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Form.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Form.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Form.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -Dcurlpp_EXPORTS -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -fPIC -o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Multi.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Multi.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Multi.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Multi.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -Dcurlpp_EXPORTS -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -fPIC -o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/OptionBase.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/OptionBase.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/OptionBase.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/OptionBase.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -Dcurlpp_EXPORTS -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -fPIC -o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Options.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Options.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Options.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/Options.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -Dcurlpp_EXPORTS -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -fPIC -o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/cURLpp.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/cURLpp.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/cURLpp.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/cURLpp.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -Dcurlpp_EXPORTS -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -fPIC -o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/CurlHandle.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/CurlHandle.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/CurlHandle.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/CurlHandle.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -Dcurlpp_EXPORTS -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -fPIC -o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/OptionList.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/OptionList.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/OptionList.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/OptionList.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -Dcurlpp_EXPORTS -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -fPIC -o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/OptionSetter.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/OptionSetter.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/OptionSetter.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/OptionSetter.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -Dcurlpp_EXPORTS -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -fPIC -o external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/SList.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/SList.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/SList.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp.dir/src/curlpp/internal/SList.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Easy.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Easy.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Easy.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Easy.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Exception.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Exception.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Exception.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Exception.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Form.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Form.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Form.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Form.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Multi.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Multi.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Multi.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Multi.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/OptionBase.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/OptionBase.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/OptionBase.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/OptionBase.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Options.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Options.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/Options.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/Options.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/cURLpp.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/cURLpp.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/cURLpp.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/cURLpp.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/CurlHandle.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/CurlHandle.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/CurlHandle.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/CurlHandle.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/OptionList.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/OptionList.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/OptionList.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/OptionList.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/OptionSetter.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/OptionSetter.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/OptionSetter.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/OptionSetter.cpp.o"
+},
+{
+  "directory": "/home/lofi/Desktop/NoodleType/build",
+  "command": "/usr/bin/clang++-17 -I/home/lofi/Desktop/NoodleType/external/glfw/include -I/home/lofi/Desktop/NoodleType/external/curlpp/include -g -std=c++11 -o external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/SList.cpp.o -c /home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/SList.cpp",
+  "file": "/home/lofi/Desktop/NoodleType/external/curlpp/src/curlpp/internal/SList.cpp",
+  "output": "external/curlpp/CMakeFiles/curlpp_static.dir/src/curlpp/internal/SList.cpp.o"
+}
+]

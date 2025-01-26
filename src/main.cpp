@@ -1,108 +1,105 @@
-#include <GL/glew.h>
+#include "imgui.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
+
 #include <GLFW/glfw3.h>
 
-#include <imgui.h>
-#include <backends/imgui_impl_glfw.h>
-#include <backends/imgui_impl_opengl3.h>
+#include <cstdio>
 
-#include <curlpp/cURLpp.hpp>   // Ініціалізація cURLpp
-#include <curlpp/Easy.hpp>    // Для класу Easy
-#include <curlpp/Options.hpp> // Для роботи з параметрами
+#include "settings/save_pressets.cpp"
 
-#include <nlohmann/json.hpp>
-#include <iostream>
-
-void initOpenGL(GLFWwindow*& window) {
-    if (!glfwInit()) {
-        std::cerr << "Failed to initialize GLFW" << std::endl;
-        exit(EXIT_FAILURE);
-    }
-
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-
-    window = glfwCreateWindow(1280, 720, "NoodleType", NULL, NULL);
-    if (window == NULL) {
-        std::cerr << "Failed to create GLFW window" << std::endl;
-        glfwTerminate();
-        exit(EXIT_FAILURE);
-    }
-
+int main() {
+    if (!glfwInit()) return -1;
+    GLFWwindow* window = glfwCreateWindow(800, 600, "NoodleType", NULL, NULL);
+    if (!window) return -1;
     glfwMakeContextCurrent(window);
     glfwSwapInterval(1);
 
-    if (glewInit() != GLEW_OK) {
-        std::cerr << "Failed to initialize GLEW" << std::endl;
-        exit(EXIT_FAILURE);
-    }
-}
-
-void initImGui(GLFWwindow* window) {
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO();
-    (void)io;
-
-    ImGui::StyleColorsDark();
+    ImGuiIO& io = ImGui::GetIO(); (void)io;
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 130");
-}
 
-void testCurl() {
-    try {
-        curlpp::Cleanup cleanup;
-        curlpp::Easy request;
-        request.setOpt<curlpp::options::Url>("https://api.github.com");
+    // style
+    ImGui::StyleColorsDark();
+    ImGuiStyle& style = ImGui::GetStyle();
+    style.WindowRounding = 0.0f;
+    style.WindowBorderSize = 0.0f;
 
-        std::ostringstream response;
-        request.setOpt<curlpp::options::WriteStream>(&response);
-        request.perform();
+    // start back color
+    float backgroundColor[3] = { 0.5f, 0.5f, 0.5f }; // grey
+    bool showSettings = false;
 
-        std::cout << "Response: " << response.str() << std::endl;
-    } catch (const curlpp::RuntimeError& e) {
-        std::cerr << "cURLpp runtime error: " << e.what() << std::endl;
-    } catch (const curlpp::LogicError& e) {
-        std::cerr << "cURLpp logic error: " << e.what() << std::endl;
-    }
-}
-
-void renderLoop(GLFWwindow* window) {
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
-
-        glClearColor(0.45f, 0.55f, 0.60f, 1.00f);
-        glClear(GL_COLOR_BUFFER_BIT);
 
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
-        ImGui::Begin("Hello, ImGui!");
-        ImGui::Text("This is an example of using ImGui with OpenGL and GLFW!");
+        // main menu
+        ImGui::SetNextWindowPos(ImVec2(0, 0));
+        ImGui::SetNextWindowSize(io.DisplaySize);
+        ImGui::Begin("Main Menu", nullptr, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove);
+
+        ImGui::SetCursorPosX((ImGui::GetWindowSize().x - ImGui::CalcTextSize("NoodleType").x) / 2);
+        ImGui::Text("NoodleType");
+
+        ImGui::Spacing();
+        ImGui::Spacing();
+        ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 50);
+
+        // "Start"
+        ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 200) / 2);
+        if (ImGui::Button("Start", ImVec2(200, 50))) {
+            printf("Start button clicked!\n");
+        }
+
+        // "My Records"
+        ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 200) / 2);
+        if (ImGui::Button("My Records", ImVec2(200, 50))) {
+            printf("My Records button clicked!\n");
+        }
+
+        // "Settings"
+        ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 200) / 2);
+        if (ImGui::Button("Settings", ImVec2(200, 50))) {
+            showSettings = !showSettings; // Перемикач для відображення вікна налаштувань
+        }
+
+        // "Exit"
+        ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 200) / 2);
+        if (ImGui::Button("Exit", ImVec2(200, 50))) {
+            break;
+        }
+
         ImGui::End();
 
-        ImGui::Render();
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+        // settings inside
+        if (showSettings) {
+            ImGui::Begin("Settings", &showSettings, ImGuiWindowFlags_AlwaysAutoResize);
+            ImGui::Text("Background Color");
+            if (ImGui::ColorEdit3("Choose Color", backgroundColor)) {
+                printf("Color changed to: %f, %f, %f\n", backgroundColor[0], backgroundColor[1], backgroundColor[2]);
+                SaveBackgroundColor(backgroundColor);
+            }
+            ImGui::End();
+        }
 
+        ImGui::Render();
+        int display_w, display_h;
+        glfwGetFramebufferSize(window, &display_w, &display_h);
+        glViewport(0, 0, display_w, display_h);
+        glClearColor(backgroundColor[0], backgroundColor[1], backgroundColor[2], 1.0f); // Оновлення кольору фону
+        glClear(GL_COLOR_BUFFER_BIT);
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
         glfwSwapBuffers(window);
     }
-}
-
-int main() {
-    GLFWwindow* window;
-
-    initOpenGL(window);
-    initImGui(window);
-
-    std::cout << "Testing cURLpp..." << std::endl;
-    testCurl();
-
-    renderLoop(window);
 
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
-
     glfwDestroyWindow(window);
     glfwTerminate();
 

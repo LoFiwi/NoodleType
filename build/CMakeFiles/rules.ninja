@@ -7,14 +7,14 @@
 
 # =============================================================================
 # Project: NoodleType
-# Configurations: 
+# Configurations: Debug
 # =============================================================================
 # =============================================================================
 
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__NoodleType_unscanned_
+rule CXX_COMPILER__NoodleType_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/clang++-17 $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule CXX_COMPILER__NoodleType_unscanned_
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__NoodleType_
+rule CXX_EXECUTABLE_LINKER__NoodleType_Debug
   command = $PRE_LINK && /usr/bin/clang++-17 $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -41,7 +41,7 @@ rule CUSTOM_COMMAND
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__glfw_unscanned_
+rule C_COMPILER__glfw_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/clang-17 $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -51,7 +51,7 @@ rule C_COMPILER__glfw_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__glfw_
+rule C_STATIC_LIBRARY_LINKER__glfw_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/llvm-ar-17 qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/llvm-ranlib-17 $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -60,7 +60,7 @@ rule C_STATIC_LIBRARY_LINKER__glfw_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__glew_unscanned_
+rule C_COMPILER__glew_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/clang-17 $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -70,7 +70,7 @@ rule C_COMPILER__glew_unscanned_
 #############################################
 # Rule for linking C shared library.
 
-rule C_SHARED_LIBRARY_LINKER__glew_
+rule C_SHARED_LIBRARY_LINKER__glew_Debug
   command = $PRE_LINK && /usr/bin/clang-17 -fPIC $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared $SONAME_FLAG$SONAME -o $TARGET_FILE $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking C shared library $TARGET_FILE
   restat = $RESTAT
@@ -87,7 +87,7 @@ rule CMAKE_SYMLINK_LIBRARY
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__glew_s_unscanned_
+rule C_COMPILER__glew_s_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/clang-17 $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -97,7 +97,7 @@ rule C_COMPILER__glew_s_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__glew_s_
+rule C_STATIC_LIBRARY_LINKER__glew_s_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/llvm-ar-17 qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/llvm-ranlib-17 $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -106,7 +106,7 @@ rule C_STATIC_LIBRARY_LINKER__glew_s_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__glewinfo_unscanned_
+rule C_COMPILER__glewinfo_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/clang-17 $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -116,7 +116,7 @@ rule C_COMPILER__glewinfo_unscanned_
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__glewinfo_
+rule C_EXECUTABLE_LINKER__glewinfo_Debug
   command = $PRE_LINK && /usr/bin/clang-17 $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
@@ -125,7 +125,7 @@ rule C_EXECUTABLE_LINKER__glewinfo_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__visualinfo_unscanned_
+rule C_COMPILER__visualinfo_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/clang-17 $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -135,7 +135,7 @@ rule C_COMPILER__visualinfo_unscanned_
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__visualinfo_
+rule C_EXECUTABLE_LINKER__visualinfo_Debug
   command = $PRE_LINK && /usr/bin/clang-17 $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
@@ -144,7 +144,7 @@ rule C_EXECUTABLE_LINKER__visualinfo_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__curlpp_unscanned_
+rule CXX_COMPILER__curlpp_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/clang++-17 $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -154,7 +154,7 @@ rule CXX_COMPILER__curlpp_unscanned_
 #############################################
 # Rule for linking CXX shared library.
 
-rule CXX_SHARED_LIBRARY_LINKER__curlpp_
+rule CXX_SHARED_LIBRARY_LINKER__curlpp_Debug
   command = $PRE_LINK && /usr/bin/clang++-17 -fPIC $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared $SONAME_FLAG$SONAME -o $TARGET_FILE $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX shared library $TARGET_FILE
   restat = $RESTAT
@@ -163,7 +163,7 @@ rule CXX_SHARED_LIBRARY_LINKER__curlpp_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__curlpp_static_unscanned_
+rule CXX_COMPILER__curlpp_static_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/clang++-17 $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -173,7 +173,7 @@ rule CXX_COMPILER__curlpp_static_unscanned_
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__curlpp_static_
+rule CXX_STATIC_LIBRARY_LINKER__curlpp_static_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/llvm-ar-17 qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/llvm-ranlib-17 $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
