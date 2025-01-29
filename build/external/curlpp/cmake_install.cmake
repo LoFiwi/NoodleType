@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -39,7 +39,7 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/usr/bin/llvm-objdump-17")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -73,7 +73,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     if(EXISTS "${file}" AND
        NOT IS_SYMLINK "${file}")
       if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/usr/bin/strip" "${file}")
+        execute_process(COMMAND "/usr/bin/llvm-strip-17" "${file}")
       endif()
     endif()
   endforeach()
@@ -105,8 +105,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     unset(_cmake_export_file_changed)
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/curlpp" TYPE FILE FILES "/home/lofi/Desktop/NoodleType/build/external/curlpp/CMakeFiles/Export/2d301820995502701e2a18c8dcf7a4b0/curlppTargets.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/curlpp" TYPE FILE FILES "/home/lofi/Desktop/NoodleType/build/external/curlpp/CMakeFiles/Export/2d301820995502701e2a18c8dcf7a4b0/curlppTargets-noconfig.cmake")
+  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/curlpp" TYPE FILE FILES "/home/lofi/Desktop/NoodleType/build/external/curlpp/CMakeFiles/Export/2d301820995502701e2a18c8dcf7a4b0/curlppTargets-debug.cmake")
   endif()
 endif()
 
