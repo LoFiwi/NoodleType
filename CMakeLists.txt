@@ -14,46 +14,60 @@ set(SOURCES
     imgui-master/backends/imgui_impl_opengl3.cpp
 )
 
-# Пошук OpenGL
-find_package(OpenGL REQUIRED)
-
-# GLFW
-add_subdirectory(external/glfw)
-include_directories(external/glfw/include)
-
-# GLEW
-add_subdirectory(external/glew/build/cmake)
-
-# Визначення шляхів для GLEW залежно від ОС
+# Визначення ОС
 if(WIN32)
-    set_target_properties(glew PROPERTIES
-        IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/external/glew/lib/Release/glew32s.lib
-        INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_SOURCE_DIR}/external/glew/include
-    )
+    add_definitions(-DWINDOWS)
+elseif(APPLE)
+    add_definitions(-DMACOS)
 elseif(UNIX)
-    set_target_properties(glew PROPERTIES
-        IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/external/glew/lib/libGLEW.a
-        INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_SOURCE_DIR}/external/glew/include
-    )
+    add_definitions(-DLINUX)
 endif()
 
-# cURLpp
+find_package(OpenGL REQUIRED)
+find_package(GLEW QUIET)
+find_package(glfw3 QUIET)
+
+#GLFW
+if(NOT glfw3_FOUND)
+    add_subdirectory(external/glfw)
+    include_directories(external/glfw/include)
+    set(GLFW_LIB glfw)
+else()
+    set(GLFW_LIB glfw)
+endif()
+
+#GLEW
+if(NOT GLEW_FOUND)
+
+    if(WIN32)
+        if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+            include_directories(external/glewWin32/include)
+            set(GLEW_LIB ${CMAKE_SOURCE_DIR}/external/glewWin32/lib/Release/x64/glew32s.lib)
+        else()
+            include_directories(external/glewWin32/include)
+            set(GLEW_LIB ${CMAKE_SOURCE_DIR}/external/glewWin32/lib/Release/Win32/glew32s.lib)
+        endif()
+    else()
+        add_subdirectory(external/glew/build/cmake)
+        include_directories(external/glew/include)
+        set(GLEW_LIB ${CMAKE_SOURCE_DIR}/external/glew/lib/libGLEW.a)
+    endif()
+
+else()
+    message(STATUS "GLEW found via find_package")
+    set(GLEW_LIB GLEW)
+endif()
+
+#cURLpp
 add_subdirectory(external/curlpp)
 include_directories(external/curlpp/include)
 
-# JSON
+#JSON
 include_directories(external/json/include)
 
-# ImGui
+#ImGui
 include_directories(imgui-master imgui-master/backends)
 
-# Виконуваний файл
 add_executable(NoodleType ${SOURCES})
 
-# Лінкування
-target_link_libraries(NoodleType
-    glfw
-    OpenGL::GL
-    glew_s
-    curlpp
-)
+target_link_libraries(NoodleType ${GLFW_LIB} OpenGL::GL ${GLEW_LIB} curlpp)

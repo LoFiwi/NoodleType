@@ -5,7 +5,7 @@
             "name": "Run NoodleType",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/NoodleType", 
+            "program": "${workspaceFolder}/build/Release/NoodleType", 
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
