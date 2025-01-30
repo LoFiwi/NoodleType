@@ -4,7 +4,7 @@ NoodleType - A cross-platform application for training the speed of typing from 
 
 ## Installation Guide 🚀
 
-### Linux 💻
+### Linux(Debian/Ubuntu) 💻
 
 1. **Install Dependencies**:  
    - Install **CMake**: `sudo apt-get install cmake`
