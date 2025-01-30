@@ -3,7 +3,6 @@ project(NoodleType)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# Вихідні файли
 set(SOURCES
     src/main.cpp
     imgui-master/imgui.cpp
@@ -14,7 +13,6 @@ set(SOURCES
     imgui-master/backends/imgui_impl_opengl3.cpp
 )
 
-# Визначення ОС
 if(WIN32)
     add_definitions(-DWINDOWS)
 elseif(APPLE)
