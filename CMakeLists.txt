@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(SOURCES
     src/main.cpp
     src/Image_load.cpp
+    # --- buttons.cpp add here (src/main_menu/buttons.cpp)
     imgui-master/imgui.cpp
     imgui-master/imgui_draw.cpp
     imgui-master/imgui_widgets.cpp

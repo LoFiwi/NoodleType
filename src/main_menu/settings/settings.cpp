@@ -4,7 +4,7 @@
 
 
 void settingsRender(bool& showSettings, float backgroundColor[3]) {
-    if (!showSettings) return; // Если меню закрыто, выходим из функции
+    if (!showSettings) return;
 
     ImGui::Begin("Settings", &showSettings, ImGuiWindowFlags_AlwaysAutoResize);
     ImGui::Text("Background Color");

@@ -13,9 +13,9 @@ class ImageLoad{
     GLFWimage user_image;
 
     public:
-        ImageLoad(const std::string& pathToImage);
+        ImageLoad(const std::string& pathToImage);  // Load image by Path to it.
 
-        void setIcon(GLFWwindow* window);
+        void setIcon(GLFWwindow* window);   // Set Icon to app window.
 
         ~ImageLoad();
 };
