@@ -1,10 +1,11 @@
 #include "imgui.h"
 #include <GLFW/glfw3.h>
-
 #include "save_pressets.cpp"
 
 
-void settingsRender(bool showSettings, float backgroundColor[3]){
+void settingsRender(bool& showSettings, float backgroundColor[3]) {
+    if (!showSettings) return; // Если меню закрыто, выходим из функции
+
     ImGui::Begin("Settings", &showSettings, ImGuiWindowFlags_AlwaysAutoResize);
     ImGui::Text("Background Color");
     if (ImGui::ColorEdit3("Choose Color", backgroundColor)) {
