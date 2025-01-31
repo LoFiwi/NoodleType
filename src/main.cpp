@@ -6,7 +6,8 @@
 
 #include <cstdio>
 
-#include "settings/save_pressets.cpp"
+#include "main_menu/settings/settings.cpp"
+#include "main_menu/Start/start.cpp"
 
 int main() {
     if (!glfwInit()) return -1;
@@ -30,6 +31,7 @@ int main() {
     // start back color
     float backgroundColor[3] = { 0.5f, 0.5f, 0.5f }; // grey
     bool showSettings = false;
+    bool showStart = false;
 
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
@@ -53,7 +55,7 @@ int main() {
         // "Start"
         ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 200) / 2);
         if (ImGui::Button("Start", ImVec2(200, 50))) {
-            printf("Start button clicked!\n");
+            showStart = !showStart;
         }
 
         // "My Records"
@@ -65,7 +67,7 @@ int main() {
         // "Settings"
         ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 200) / 2);
         if (ImGui::Button("Settings", ImVec2(200, 50))) {
-            showSettings = !showSettings; // Перемикач для відображення вікна налаштувань
+            showSettings = !showSettings;
         }
 
         // "Exit"
@@ -76,22 +78,20 @@ int main() {
 
         ImGui::End();
 
+        if (showStart){
+            RenderFrame(showStart);
+        }
+
         // settings inside
         if (showSettings) {
-            ImGui::Begin("Settings", &showSettings, ImGuiWindowFlags_AlwaysAutoResize);
-            ImGui::Text("Background Color");
-            if (ImGui::ColorEdit3("Choose Color", backgroundColor)) {
-                printf("Color changed to: %f, %f, %f\n", backgroundColor[0], backgroundColor[1], backgroundColor[2]);
-                SaveBackgroundColor(backgroundColor);
-            }
-            ImGui::End();
+            settingsRender(showSettings,backgroundColor);
         }
 
         ImGui::Render();
         int display_w, display_h;
         glfwGetFramebufferSize(window, &display_w, &display_h);
         glViewport(0, 0, display_w, display_h);
-        glClearColor(backgroundColor[0], backgroundColor[1], backgroundColor[2], 1.0f); // Оновлення кольору фону
+        glClearColor(backgroundColor[0], backgroundColor[1], backgroundColor[2], 1.0f); //Color update
         glClear(GL_COLOR_BUFFER_BIT);
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
         glfwSwapBuffers(window);
