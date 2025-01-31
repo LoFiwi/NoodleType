@@ -9,12 +9,20 @@
 #include "main_menu/settings/settings.cpp"
 #include "main_menu/Start/start.cpp"
 
+#include "stb_image.h"
+
+#include "Image_load.h"
+
 int main() {
     if (!glfwInit()) return -1;
+
     GLFWwindow* window = glfwCreateWindow(800, 600, "NoodleType", NULL, NULL);
     if (!window) return -1;
     glfwMakeContextCurrent(window);
     glfwSwapInterval(1);
+
+    ImageLoad icon("assets/images/icon.png");
+    icon.setIcon(window);
 
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
@@ -78,6 +86,7 @@ int main() {
 
         ImGui::End();
 
+        // start inside
         if (showStart){
             RenderFrame(showStart);
         }

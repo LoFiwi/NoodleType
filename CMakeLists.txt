@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(SOURCES
     src/main.cpp
+    src/Image_load.cpp
     imgui-master/imgui.cpp
     imgui-master/imgui_draw.cpp
     imgui-master/imgui_widgets.cpp
@@ -25,7 +26,7 @@ find_package(OpenGL REQUIRED)
 find_package(GLEW QUIET)
 find_package(glfw3 QUIET)
 
-#GLFW
+# GLFW
 if(NOT glfw3_FOUND)
     add_subdirectory(external/glfw)
     include_directories(external/glfw/include)
@@ -34,7 +35,7 @@ else()
     set(GLFW_LIB glfw)
 endif()
 
-#GLEW
+# GLEW
 if(NOT GLEW_FOUND)
 
     if(WIN32)
@@ -56,15 +57,20 @@ else()
     set(GLEW_LIB GLEW)
 endif()
 
-#cURLpp
+# cURLpp
 add_subdirectory(external/curlpp)
 include_directories(external/curlpp/include)
 
-#JSON
+# JSON
 include_directories(external/json/include)
 
-#ImGui
+# ImGui
 include_directories(imgui-master imgui-master/backends)
+
+# for stb_image.h
+include_directories(${CMAKE_SOURCE_DIR}/external/)
+
+add_definitions(-DASSETS_PATH="${PROJECT_SOURCE_DIR}/assets")
 
 add_executable(NoodleType ${SOURCES})
 

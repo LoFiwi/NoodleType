@@ -10,18 +10,18 @@ void RenderFrame(bool& showStart) {
 
     ImGui::Begin("Start Page", nullptr, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove);
 
-    // Таймер
+    // Timer
     static auto startTime = std::chrono::steady_clock::now();
     auto currentTime = std::chrono::steady_clock::now();
     auto elapsedTime = std::chrono::duration_cast<std::chrono::seconds>(currentTime - startTime).count();
 
-    // отображение таймера
+    // show timer
     ImGui::SetCursorPosX((ImGui::GetWindowSize().x - ImGui::CalcTextSize("Time: 00:00").x) / 2);
     ImGui::Text("Time: %02d:%02d", elapsedTime / 60, elapsedTime % 60);
 
     ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 50);
 
-    // Поле ввода текста
+    // after text input
     static char inputBuffer[256] = "";
     ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 400) / 2);
     ImGui::InputTextMultiline("##input", inputBuffer, IM_ARRAYSIZE(inputBuffer),
@@ -30,12 +30,12 @@ void RenderFrame(bool& showStart) {
     ImGui::Spacing();
     ImGui::Spacing();
 
-    // Кнопка "Back to Menu"
+    // "Back to Menu"
     ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 200) / 2);
     if (ImGui::Button("Back to Menu", ImVec2(200, 50))) {
-        showStart = false; // Закрити стартову сторінку
-        memset(inputBuffer, 0, sizeof(inputBuffer)); // Очистити поле вводу
-        startTime = std::chrono::steady_clock::now(); // Скинути таймер
+        showStart = false;
+        memset(inputBuffer, 0, sizeof(inputBuffer)); // clear text field
+        startTime = std::chrono::steady_clock::now(); // reset timer
     }
 
     ImGui::End();
