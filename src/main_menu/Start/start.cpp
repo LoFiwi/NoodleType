@@ -1,6 +1,5 @@
 #include "imgui.h"
 #include <GLFW/glfw3.h>
-// #include <chrono>
 
 #include "../../API/TypingSpeedAPI.h"
 
@@ -16,6 +15,9 @@ void RenderFrame(bool& showStart) {
     ImGui::SetNextWindowSize(io.DisplaySize);
     ImGui::Begin("Start Page", nullptr, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove);
 
+    ImGui::SetCursorPosX((ImGui::GetWindowSize().x - ImGui::CalcTextSize("Press Enter to stop test.").x) / 2);
+    ImGui::Text("Press Enter to stop test.");
+
     // Display text for typing
     ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 20);
     ImGui::SetCursorPosX((ImGui::GetWindowSize().x - ImGui::CalcTextSize(api.getCurrentText().c_str()).x) / 2);
@@ -26,20 +28,20 @@ void RenderFrame(bool& showStart) {
     ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 50);
     ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 400) / 2);
     
-    if(!testFinished){
-        if (ImGui::InputTextMultiline("##input", inputBuffer, IM_ARRAYSIZE(inputBuffer),
-            ImVec2(400, 100), ImGuiInputTextFlags_AllowTabInput)) {
-            if (!testStarted && strlen(inputBuffer) > 0) {
-                api.startTest();
-                testStarted = true;
-            }
-
-            // Check the length of the entered text
-            if (strlen(inputBuffer) >= api.getCurrentText().length()) {
-                testFinished = true;
-                finalResults = api.calculateResults(inputBuffer);
-                api.reset();
-            }
+    if (!testFinished) {
+        bool enter_pressed = ImGui::InputTextMultiline("##input", inputBuffer, IM_ARRAYSIZE(inputBuffer),
+            ImVec2(400, 100), ImGuiInputTextFlags_AllowTabInput);
+            
+        if (!testStarted && strlen(inputBuffer) > 0) {
+            api.startTest();
+            testStarted = true;
+        }
+            
+        // checking whether the enter button was pressed
+        if (ImGui::IsKeyPressed(ImGuiKey_Enter) && testStarted) {
+            testFinished = true;
+            finalResults = api.calculateResults(inputBuffer);
+            api.reset();
         }
     } else{
         // Show the entered text without the ability to edit
@@ -76,9 +78,6 @@ void RenderFrame(bool& showStart) {
         testFinished = false;
         api.reset();
     }
-
-    // ImGui::SameLine();
-    // ImGui::SetCursorPosX((windowWidth - totalButtonsWidth) / 2 + 220); // 200 + 20 (ширина першої кнопки + відступ)
 
     // "Back to Menu"
     ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 20);
