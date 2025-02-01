@@ -7,6 +7,7 @@ set(SOURCES
     src/main.cpp
     src/Image_load.cpp
     # --- buttons.cpp add here (src/main_menu/buttons.cpp)
+    src/API/TypingSpeedAPI.cpp
     imgui-master/imgui.cpp
     imgui-master/imgui_draw.cpp
     imgui-master/imgui_widgets.cpp

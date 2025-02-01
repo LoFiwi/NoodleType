@@ -1,41 +1,93 @@
 #include "imgui.h"
 #include <GLFW/glfw3.h>
-#include <chrono>
+// #include <chrono>
+
+#include "../../API/TypingSpeedAPI.h"
 
 void RenderFrame(bool& showStart) {
-    ImGuiIO& io = ImGui::GetIO();
 
+    static TypingSpeedAPI api;
+    static bool testStarted = false;
+    static bool testFinished = false;
+    static TypingSpeedAPI::TestResults finalResults = {0.0, 0.0, 0.0};
+
+    ImGuiIO& io = ImGui::GetIO();
     ImGui::SetNextWindowPos(ImVec2(0, 0));
     ImGui::SetNextWindowSize(io.DisplaySize);
-
     ImGui::Begin("Start Page", nullptr, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove);
 
-    // Timer
-    static auto startTime = std::chrono::steady_clock::now();
-    auto currentTime = std::chrono::steady_clock::now();
-    auto elapsedTime = std::chrono::duration_cast<std::chrono::seconds>(currentTime - startTime).count();
+    // Display text for typing
+    ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 20);
+    ImGui::SetCursorPosX((ImGui::GetWindowSize().x - ImGui::CalcTextSize(api.getCurrentText().c_str()).x) / 2);
+    ImGui::TextWrapped("%s", api.getCurrentText().c_str());
 
-    // show timer
-    ImGui::SetCursorPosX((ImGui::GetWindowSize().x - ImGui::CalcTextSize("Time: 00:00").x) / 2);
-    ImGui::Text("Time: %02d:%02d", elapsedTime / 60, elapsedTime % 60);
-
-    ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 50);
-
-    // after text input
+    // Input field
     static char inputBuffer[256] = "";
+    ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 50);
     ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 400) / 2);
-    ImGui::InputTextMultiline("##input", inputBuffer, IM_ARRAYSIZE(inputBuffer),
-        ImVec2(400, 100), ImGuiInputTextFlags_AllowTabInput);
+    
+    if(!testFinished){
+        if (ImGui::InputTextMultiline("##input", inputBuffer, IM_ARRAYSIZE(inputBuffer),
+            ImVec2(400, 100), ImGuiInputTextFlags_AllowTabInput)) {
+            if (!testStarted && strlen(inputBuffer) > 0) {
+                api.startTest();
+                testStarted = true;
+            }
 
-    ImGui::Spacing();
-    ImGui::Spacing();
+            // Check the length of the entered text
+            if (strlen(inputBuffer) >= api.getCurrentText().length()) {
+                testFinished = true;
+                finalResults = api.calculateResults(inputBuffer);
+                api.reset();
+            }
+        }
+    } else{
+        // Show the entered text without the ability to edit
+        ImGui::InputTextMultiline("##input", inputBuffer, IM_ARRAYSIZE(inputBuffer),
+            ImVec2(400, 100), ImGuiInputTextFlags_ReadOnly);
+    }
+
+    // Show results
+    if (testFinished) {
+            // Показуємо фінальні результати
+            ImGui::Text("Final Results:");
+            ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 200) / 2);
+            ImGui::Text("WPM: %.1f", finalResults.wpm);
+            ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 200) / 2);
+            ImGui::Text("Accuracy: %.1f%%", finalResults.accuracy);
+            ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 200) / 2);
+            ImGui::Text("Time: %.1f seconds", finalResults.elapsedTime);
+    }
+
+    // Buttons at the bottom
+    ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 20);
+
+    // Container for indented buttons
+    float windowWidth = ImGui::GetWindowSize().x;
+    float totalButtonsWidth = 420;  // 200 * 2 + 20 (width of two buttons + indentation between them)
+    ImGui::SetCursorPosX((windowWidth - totalButtonsWidth) / 2);
+
+    // "Restart"
+    ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 20);
+    ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 200) / 2);
+    if (ImGui::Button("Restart", ImVec2(200, 50))) {
+        memset(inputBuffer, 0, sizeof(inputBuffer));
+        testStarted = false;
+        testFinished = false;
+        api.reset();
+    }
+
+    // ImGui::SameLine();
+    // ImGui::SetCursorPosX((windowWidth - totalButtonsWidth) / 2 + 220); // 200 + 20 (ширина першої кнопки + відступ)
 
     // "Back to Menu"
+    ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 20);
     ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 200) / 2);
     if (ImGui::Button("Back to Menu", ImVec2(200, 50))) {
         showStart = false;
-        memset(inputBuffer, 0, sizeof(inputBuffer)); // clear text field
-        startTime = std::chrono::steady_clock::now(); // reset timer
+        memset(inputBuffer, 0, sizeof(inputBuffer));
+        testStarted = false;
+        api.reset();
     }
 
     ImGui::End();

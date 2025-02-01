@@ -1,16 +1,13 @@
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
-
 #include <GLFW/glfw3.h>
+#include "stb_image.h"
 
 #include <cstdio>
 
 #include "main_menu/settings/settings.cpp"
 #include "main_menu/Start/start.cpp"
-
-#include "stb_image.h"
-
 #include "Image_load.h"
 
 int main() {
