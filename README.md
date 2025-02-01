@@ -4,6 +4,22 @@ NoodleType - A cross-platform application for training the speed of typing from 
 
 ## Installation Guide 🚀
 
+This project requires several external libraries and uses **Git submodules**. Follow the instructions below to set up the project on different platforms.
+
+## Cloning the Repository with Submodules 📥
+
+Since this project includes submodules, you need to clone it with the `--recurse-submodules` flag:
+
+```bash
+git clone --recurse-submodules https://github.com/your_username/NoodleType.git
+```
+
+If you have already cloned the repository without submodules, initialize them manually:
+
+```bash
+git submodule update --init --recursive
+```
+
 ### Linux(Debian/Ubuntu) 💻
 
 1. **Install Dependencies**:  
