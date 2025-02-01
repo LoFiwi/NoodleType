@@ -11,7 +11,7 @@ This project requires several external libraries and uses **Git submodules**. Fo
 Since this project includes submodules, you need to clone it with the `--recurse-submodules` flag:
 
 ```bash
-git clone --recurse-submodules https://github.com/your_username/NoodleType.git
+git clone --recurse-submodules https://github.com/LoFiwi/NoodleType
 ```
 
 If you have already cloned the repository without submodules, initialize them manually:
