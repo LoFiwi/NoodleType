@@ -8,7 +8,7 @@ size_t TypingSpeedAPI::WriteCallback(void* contents, size_t size, size_t nmemb, 
 
 TypingSpeedAPI::TypingSpeedAPI() : isTestActive(false) {
     curl_global_init(CURL_GLOBAL_DEFAULT);
-    // Тимчасовий текст, поки не підключено реальне API
+    // Temporary text until the real API is connected
     sampleText = "The quick brown fox jumps over the lazy dog.";
 }
 
@@ -39,7 +39,7 @@ TypingSpeedAPI::TestResults TypingSpeedAPI::calculateResults(const char* inputTe
     
     results.elapsedTime = elapsed.count();
     
-    // Розрахунок точності
+    // Accuracy calculation
     int correctChars = 0;
     int minLength = std::min(input.length(), sampleText.length());
     for (int i = 0; i < minLength; i++) {
@@ -47,7 +47,7 @@ TypingSpeedAPI::TestResults TypingSpeedAPI::calculateResults(const char* inputTe
     }
     results.accuracy = minLength > 0 ? (correctChars * 100.0) / minLength : 0.0;
     
-    // Розрахунок WPM
+    // calculate WPM
     double minutes = results.elapsedTime / 60.0;
     results.wpm = minutes > 0 ? (input.length() / 5.0) / minutes : 0.0;
     
