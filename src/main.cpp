@@ -8,6 +8,7 @@
 
 #include "main_menu/settings/settings.cpp"
 #include "main_menu/Start/start.cpp"
+#include "main_menu/info.cpp"
 #include "Image_load.h"
 
 int main() {
@@ -80,6 +81,8 @@ int main() {
         if (ImGui::Button("Exit", ImVec2(200, 50))) {
             break;
         }
+
+        RenderInfoIcon();
 
         ImGui::End();
 
