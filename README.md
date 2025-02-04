@@ -62,13 +62,13 @@ git submodule update --init --recursive
 2. **Install Libraries** via vcpkg:  
    In the command prompt, navigate to your project directory and run the following:
    ```bash
-   ./vcpkg install glfw3 curlpp glew
+   .\vcpkg install glfw3 curlpp glew
    ```
 
 3. **Build the Project**:  
    - Open the project directory in **Visual Studio** or run:
      ```bash
-     cmake -B build -DCMAKE_TOOLCHAIN_FILE=C:/path/to/vcpkg.cake
+     cmake -B build -DCMAKE_TOOLCHAIN_FILE=C:\path\to\vcpkg.cake
      cmake --build build
      ```
 ---
