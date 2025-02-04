@@ -6,6 +6,12 @@ set(CMAKE_CXX_STANDARD 17)
 # Вихідні файли
 set(SOURCES
     src/main.cpp
+<<<<<<< Updated upstream
+=======
+    src/Image_load.cpp
+    src/main_menu/buttons.cpp
+    src/API/TypingSpeedAPI.cpp
+>>>>>>> Stashed changes
     imgui-master/imgui.cpp
     imgui-master/imgui_draw.cpp
     imgui-master/imgui_widgets.cpp
@@ -47,8 +53,17 @@ include_directories(external/json/include)
 # ImGui
 include_directories(imgui-master imgui-master/backends)
 
+<<<<<<< Updated upstream
 # Виконуваний файл
 add_executable(NoodleType ${SOURCES})
+=======
+# for stb_image.h
+include_directories(${CMAKE_SOURCE_DIR}/external/)
+
+add_definitions(-DASSETS_PATH="${PROJECT_SOURCE_DIR}/assets")
+
+add_executable(NoodleType ${SOURCES} "src/main_menu/buttons.cpp")
+>>>>>>> Stashed changes
 
 # Лінкування
 target_link_libraries(NoodleType

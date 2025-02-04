@@ -1,0 +1,18 @@
+﻿{
+    "configurations": [
+        {
+            "name": "x64-Debug",
+            "generator": "Ninja",
+            "cmakeCommandArgs": "",
+            "buildCommandArgs": "",
+            "ctestCommandArgs": "",
+            "variables": [
+                {
+                    "name": "CMAKE_CXX_STANDARD",
+                    "value": "17",
+                    "type": "STRING"
+                }
+            ]
+        }
+    ]
+}

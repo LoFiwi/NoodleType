@@ -1,0 +1,139 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"external/curlpp/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 131,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 132,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 135,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 137,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 139,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/curlpp",
+			"paths" : 
+			[
+				"external/curlpp/cmake/curlppConfig.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				{
+					"from" : "external/curlpp/include",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"external/curlpp/libcurlpp.dll.a"
+			],
+			"targetId" : "curlpp::@2fe468ac2a5df7335fdf",
+			"targetIndex" : 1,
+			"targetIsImportLibrary" : true,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"external/curlpp/libcurlpp.dll"
+			],
+			"targetId" : "curlpp::@2fe468ac2a5df7335fdf",
+			"targetIndex" : 1,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"external/curlpp/libcurlpp.a"
+			],
+			"targetId" : "curlpp_static::@2fe468ac2a5df7335fdf",
+			"targetIndex" : 2,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/curlpp",
+			"exportName" : "curlppTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "curlpp::@2fe468ac2a5df7335fdf",
+					"index" : 1
+				},
+				{
+					"id" : "curlpp_static::@2fe468ac2a5df7335fdf",
+					"index" : 2
+				}
+			],
+			"paths" : 
+			[
+				"external/curlpp/CMakeFiles/Export/2d301820995502701e2a18c8dcf7a4b0/curlppTargets.cmake"
+			],
+			"type" : "export"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "external/curlpp",
+		"source" : "external/curlpp"
+	}
+}
