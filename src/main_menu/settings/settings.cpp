@@ -3,14 +3,27 @@
 #include "save_pressets.cpp"
 
 
-void settingsRender(bool& showSettings, float backgroundColor[3]) {
-    if (!showSettings) return;
+void settingsRender(bool& showSettings) {
 
-    ImGui::Begin("Settings", &showSettings, ImGuiWindowFlags_AlwaysAutoResize);
-    ImGui::Text("Background Color");
-    if (ImGui::ColorEdit3("Choose Color", backgroundColor)) {
-        printf("Color changed to: %f, %f, %f\n", backgroundColor[0], backgroundColor[1], backgroundColor[2]);
-        SaveBackgroundColor(backgroundColor);
+    ImGuiIO& io = ImGui::GetIO();
+
+    // Робимо вікно повноекранним
+    ImGui::SetNextWindowPos(ImVec2(0, 0), ImGuiCond_Always);
+    ImGui::SetNextWindowSize(io.DisplaySize, ImGuiCond_Always);
+
+    // Відкриваємо повноекранне вікно без заголовку та рамок
+    ImGui::Begin("Settings", nullptr, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove);
+
+    // Відступ перед кнопкою
+    ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 50);
+
+    // Вирівнюємо кнопку по центру
+    float buttonWidth = 200;
+    ImGui::SetCursorPosX((ImGui::GetWindowSize().x - buttonWidth) / 2);
+    
+    if (ImGui::Button("Back to Menu", ImVec2(buttonWidth, 50))) {
+        showSettings = false;
     }
+
     ImGui::End();
 }

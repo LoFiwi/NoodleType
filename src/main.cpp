@@ -6,9 +6,8 @@
 
 #include <cstdio>
 
-#include "main_menu/settings/settings.cpp"
-#include "main_menu/Start/start.cpp"
 #include "main_menu/info.cpp"
+#include "main_menu/MenuButtons.h"
 #include "Image_load.h"
 
 int main() {
@@ -33,11 +32,12 @@ int main() {
     ImGuiStyle& style = ImGui::GetStyle();
     style.WindowRounding = 0.0f;
     style.WindowBorderSize = 0.0f;
+    // ImVec4 clear_color = ImVec4(0.8f, 0.8f, 0.8f, 1.0f);
 
-    // start back color
-    float backgroundColor[3] = { 0.5f, 0.5f, 0.5f }; // grey
-    bool showSettings = false;
     bool showStart = false;
+    bool showSettings = false;
+
+    MenuButtons menuButtons;
 
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
@@ -58,49 +58,19 @@ int main() {
         ImGui::Spacing();
         ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 50);
 
-        // "Start"
-        ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 200) / 2);
-        if (ImGui::Button("Start", ImVec2(200, 50))) {
-            showStart = !showStart;
-        }
-
-        // "My Records"
-        ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 200) / 2);
-        if (ImGui::Button("My Records", ImVec2(200, 50))) {
-            printf("My Records button clicked!\n");
-        }
-
-        // "Settings"
-        ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 200) / 2);
-        if (ImGui::Button("Settings", ImVec2(200, 50))) {
-            showSettings = !showSettings;
-        }
-
-        // "Exit"
-        ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 200) / 2);
-        if (ImGui::Button("Exit", ImVec2(200, 50))) {
-            break;
-        }
-
+        // Buttons Render
+        menuButtons.renderButtons();
         RenderInfoIcon();
 
         ImGui::End();
-
-        // start inside
-        if (showStart){
-            RenderFrame(showStart);
-        }
-
-        // settings inside
-        if (showSettings) {
-            settingsRender(showSettings,backgroundColor);
-        }
 
         ImGui::Render();
         int display_w, display_h;
         glfwGetFramebufferSize(window, &display_w, &display_h);
         glViewport(0, 0, display_w, display_h);
-        glClearColor(backgroundColor[0], backgroundColor[1], backgroundColor[2], 1.0f); //Color update
+        glClearColor(0.8f, 0.8f, 0.8f, 1.0f);
+        ImGui::StyleColorsLight();
+        ImGui::GetStyle().Colors[ImGuiCol_WindowBg] = ImVec4(0.3f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
         glfwSwapBuffers(window);

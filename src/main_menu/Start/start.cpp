@@ -3,7 +3,7 @@
 
 #include "../../API/TypingSpeedAPI.h"
 
-void RenderFrame(bool& showStart) {
+void startRender(bool& showStart) {
 
     static TypingSpeedAPI api;
     static bool testStarted = false;

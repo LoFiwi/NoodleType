@@ -2,11 +2,12 @@ cmake_minimum_required(VERSION 3.10)
 project(NoodleType)
 
 set(CMAKE_CXX_STANDARD 17)
+set(OpenGL_GL_PREFERENCE GLVND)
 
 set(SOURCES
     src/main.cpp
     src/Image_load.cpp
-    # --- buttons.cpp add here (src/main_menu/buttons.cpp)
+    src/main_menu/MenuButtons.cpp
     src/API/TypingSpeedAPI.cpp
     imgui-master/imgui.cpp
     imgui-master/imgui_draw.cpp
