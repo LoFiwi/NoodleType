@@ -1,8 +1,12 @@
+#include "GL/glew.h"
+#include <GLFW/glfw3.h>
+
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
-#include <GLFW/glfw3.h>
+
 #include "stb_image.h"
+#include "curlpp/cURLpp.hpp"
 
 #include <cstdio>
 
@@ -16,10 +20,13 @@ int main() {
     GLFWwindow* window = glfwCreateWindow(800, 600, "NoodleType", NULL, NULL);
     if (!window) return -1;
     glfwMakeContextCurrent(window);
+    glewInit();
     glfwSwapInterval(1);
 
     ImageLoad icon("assets/images/icon.png");
     icon.setIcon(window);
+
+    ImageLoad logo("assets/textures/logo.png");
 
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
@@ -36,6 +43,9 @@ int main() {
 
     bool showStart = false;
     bool showSettings = false;
+
+    ImGui::StyleColorsLight();
+    ImGui::GetStyle().Colors[ImGuiCol_WindowBg] = ImVec4(0.3f, 0.3f, 0.3f, 1.0f);
 
     MenuButtons menuButtons;
 
@@ -54,6 +64,8 @@ int main() {
         ImGui::SetCursorPosX((ImGui::GetWindowSize().x - ImGui::CalcTextSize("NoodleType").x) / 2);
         ImGui::Text("NoodleType");
 
+        logo.draw(50,50,200,200);
+
         ImGui::Spacing();
         ImGui::Spacing();
         ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 50);
@@ -69,8 +81,7 @@ int main() {
         glfwGetFramebufferSize(window, &display_w, &display_h);
         glViewport(0, 0, display_w, display_h);
         glClearColor(0.8f, 0.8f, 0.8f, 1.0f);
-        ImGui::StyleColorsLight();
-        ImGui::GetStyle().Colors[ImGuiCol_WindowBg] = ImVec4(0.3f, 0.3f, 0.3f, 1.0f);
+
         glClear(GL_COLOR_BUFFER_BIT);
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
         glfwSwapBuffers(window);
