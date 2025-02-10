@@ -2,19 +2,21 @@
 #define MENUBUTTONS_H
 
 #include "imgui.h"
+#include "../Image_load.h"
 
 class MenuButtons {
 private:
-    bool m_showSettings;
-    bool m_showStart;
-    const ImVec2 m_buttonSize;
+    ImageLoad startButtonTexture, recordsButtonTexture, settingsButtonTexture, exitButtonTexture;
+    bool m_showSettings = false;
+    bool m_showStart = false;
+    const ImVec2 m_buttonSize = ImVec2(450,70);
+    const ImVec4 m_buttonColor = ImVec4(1.0f, 1.0f, 1.0f, 1.0f);
 
 public:
-    MenuButtons() : m_showStart(false), m_showSettings(false),  m_buttonSize(200, 50) {}
+    MenuButtons() : startButtonTexture("assets/textures/start.png"), recordsButtonTexture("assets/textures/records.png"),
+                    settingsButtonTexture("assets/textures/settings.png"),exitButtonTexture("assets/textures/exit.png"){}
     
     void renderButtons();
-    // bool isShowSettings() { return m_showSettings; }
-    // bool isShowStart() { return m_showStart; }
 };
 
 #endif

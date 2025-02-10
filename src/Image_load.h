@@ -19,6 +19,7 @@ public:
     ImageLoad(const std::string& pathToImage);
     void setIcon(GLFWwindow* window);  // set icon
     void draw(float x, float y, float width, float height); // Draw in ImGui
+    GLuint GetTextureID() const { return textureID; }   // Get texture ID.
     ~ImageLoad();
 };
 

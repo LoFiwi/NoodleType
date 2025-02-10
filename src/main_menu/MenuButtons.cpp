@@ -3,36 +3,56 @@
 #include "Start/start.cpp"
 #include "settings/settings.cpp"
 
+#include "stb_image.h"
+
 #include <cstdio>
 
 #include <GLFW/glfw3.h>
 
 void MenuButtons::renderButtons() {
     float centerX = (ImGui::GetWindowSize().x - m_buttonSize.x) / 2;
-    
+    float centerY = (ImGui::GetWindowSize().y - m_buttonSize.y) / 2;
+
+    ImGui::PushStyleColor(ImGuiCol_Border, ImVec4(0.0f, 0.0f, 0.0f, 0.0f));
+    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.0f, 0.0f, 0.0f, 0.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.5f, 0.5f, 0.5f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.0f, 0.0f, 0.0f, 0.0f));
+    ImGui::PushStyleVar(ImGuiStyleVar_FrameBorderSize, 0.0f);
+    ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(1, 1));
+
     // Start Button
     ImGui::SetCursorPosX(centerX);
-    if (ImGui::Button("Start", m_buttonSize)) {
+    ImTextureID startTexId = static_cast<ImTextureID>(static_cast<intptr_t>(startButtonTexture.GetTextureID()));
+    if (ImGui::ImageButton("StartBtn", startTexId, m_buttonSize, ImVec2(0, 0), ImVec2(1, 1), m_buttonColor)) {
         m_showStart = !m_showStart;
     }
     
+    ImGui::Spacing();
+    ImGui::Spacing();
+
     // My Records Button
     ImGui::SetCursorPosX(centerX);
-    if (ImGui::Button("My Records", m_buttonSize)) {
-        printf("My Records button clicked!\n");
+    ImTextureID recordsTexId = static_cast<ImTextureID>(static_cast<intptr_t>(recordsButtonTexture.GetTextureID()));
+    if (ImGui::ImageButton("MyRecordsBtn", recordsTexId, m_buttonSize, ImVec2(0, 0), ImVec2(1, 1), m_buttonColor)) {
+        printf("My Records");
     }
     
     // Settings Button
     ImGui::SetCursorPosX(centerX);
-    if (ImGui::Button("Settings", m_buttonSize)) {
+    ImTextureID settingsTexId = static_cast<ImTextureID>(static_cast<intptr_t>(settingsButtonTexture.GetTextureID()));
+    if (ImGui::ImageButton("SettingsBtn", settingsTexId, m_buttonSize, ImVec2(0,0),ImVec2(1,1), m_buttonColor)) {
         m_showSettings = !m_showSettings;
     }
     
     // Exit Button
     ImGui::SetCursorPosX(centerX);
-    if (ImGui::Button("Exit", m_buttonSize)) {
+    ImTextureID exitTexId = static_cast<ImTextureID>(static_cast<intptr_t>(exitButtonTexture.GetTextureID()));
+    if (ImGui::ImageButton("ExitBtn", exitTexId, m_buttonSize, ImVec2(0,0),ImVec2(1,1),m_buttonColor)) {
         glfwSetWindowShouldClose(glfwGetCurrentContext(), GLFW_TRUE);
     }
+
+    ImGui::PopStyleVar(2);
+    ImGui::PopStyleColor(4);
 
     if(m_showStart){
         startRender(m_showStart);

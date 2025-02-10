@@ -26,7 +26,8 @@ int main() {
     ImageLoad icon("assets/images/icon.png");
     icon.setIcon(window);
 
-    ImageLoad logo("assets/textures/logo.png");
+    ImageLoad logo("assets/images/logo.png");
+    ImageLoad noodleText("assets/images/noodle_Top.png");
 
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
@@ -39,7 +40,6 @@ int main() {
     ImGuiStyle& style = ImGui::GetStyle();
     style.WindowRounding = 0.0f;
     style.WindowBorderSize = 0.0f;
-    // ImVec4 clear_color = ImVec4(0.8f, 0.8f, 0.8f, 1.0f);
 
     bool showStart = false;
     bool showSettings = false;
@@ -61,14 +61,13 @@ int main() {
         ImGui::SetNextWindowSize(io.DisplaySize);
         ImGui::Begin("Main Menu", nullptr, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove);
 
-        ImGui::SetCursorPosX((ImGui::GetWindowSize().x - ImGui::CalcTextSize("NoodleType").x) / 2);
-        ImGui::Text("NoodleType");
-
-        logo.draw(50,50,200,200);
+        logo.draw(((ImGui::GetWindowSize().x - 290) / 2),39,110,110);   // x, y, width, height.
+        noodleText.draw(((ImGui::GetWindowSize().x + 30)/2),39,145,110);
 
         ImGui::Spacing();
         ImGui::Spacing();
-        ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 50);
+        ImGui::Spacing();
+        ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 10);
 
         // Buttons Render
         menuButtons.renderButtons();
