@@ -2,6 +2,8 @@
 #include <GLFW/glfw3.h>
 #include "save_pressets.cpp"
 
+#include "../../Image_load.h"
+
 
 void settingsRender(bool& showSettings) {
 
