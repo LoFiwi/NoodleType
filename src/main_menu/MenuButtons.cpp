@@ -1,7 +1,9 @@
 #include "MenuButtons.h"
 
-#include "Start/start.cpp"
+#include "Start/Start.cpp"
 #include "settings/settings.cpp"
+
+#include "Start/Start.h"
 
 #include "stb_image.h"
 
@@ -22,7 +24,7 @@ void MenuButtons::renderButtons() {
 
     // Start Button
     ImGui::SetCursorPosX(centerX);
-    ImTextureID startTexId = static_cast<ImTextureID>(static_cast<intptr_t>(startButtonTexture.GetTextureID()));
+    ImTextureID startTexId = static_cast<ImTextureID>(static_cast<intptr_t>(m_startButtonTexture.GetTextureID()));
     if (ImGui::ImageButton("StartBtn", startTexId, m_buttonSize, ImVec2(0, 0), ImVec2(1, 1), m_buttonColor)) {
         m_showStart = !m_showStart;
     }
@@ -32,27 +34,28 @@ void MenuButtons::renderButtons() {
 
     // My Records Button
     ImGui::SetCursorPosX(centerX);
-    ImTextureID recordsTexId = static_cast<ImTextureID>(static_cast<intptr_t>(recordsButtonTexture.GetTextureID()));
+    ImTextureID recordsTexId = static_cast<ImTextureID>(static_cast<intptr_t>(m_recordsButtonTexture.GetTextureID()));
     if (ImGui::ImageButton("MyRecordsBtn", recordsTexId, m_buttonSize, ImVec2(0, 0), ImVec2(1, 1), m_buttonColor)) {
         printf("My Records");
     }
     
     // Settings Button
     ImGui::SetCursorPosX(centerX);
-    ImTextureID settingsTexId = static_cast<ImTextureID>(static_cast<intptr_t>(settingsButtonTexture.GetTextureID()));
+    ImTextureID settingsTexId = static_cast<ImTextureID>(static_cast<intptr_t>(m_settingsButtonTexture.GetTextureID()));
     if (ImGui::ImageButton("SettingsBtn", settingsTexId, m_buttonSize, ImVec2(0,0),ImVec2(1,1), m_buttonColor)) {
         m_showSettings = !m_showSettings;
     }
     
     // Exit Button
     ImGui::SetCursorPosX(centerX);
-    ImTextureID exitTexId = static_cast<ImTextureID>(static_cast<intptr_t>(exitButtonTexture.GetTextureID()));
+    ImTextureID exitTexId = static_cast<ImTextureID>(static_cast<intptr_t>(m_exitButtonTexture.GetTextureID()));
     if (ImGui::ImageButton("ExitBtn", exitTexId, m_buttonSize, ImVec2(0,0),ImVec2(1,1),m_buttonColor)) {
         glfwSetWindowShouldClose(glfwGetCurrentContext(), GLFW_TRUE);
     }
 
+    Start renderStart;
     if(m_showStart){
-        startRender(m_showStart);
+        renderStart.renderStartWindow(m_showStart);
     }
 
     if(m_showSettings){
