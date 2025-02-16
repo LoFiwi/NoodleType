@@ -13,6 +13,7 @@
 
 
 ImageLoad::ImageLoad(const std::string& pathToImage) : m_pathToImage(pathToImage), textureID(0) {
+std::cout << "Loading image: " << m_pathToImage << std::endl;
     // Upload an image
     image_data = stbi_load(
         m_pathToImage.c_str(),
@@ -29,6 +30,7 @@ ImageLoad::ImageLoad(const std::string& pathToImage) : m_pathToImage(pathToImage
 
         // Generate OpenGL texture
         generateTexture();
+
     } else {
         std::cerr << "Failed to load image: " << m_pathToImage << "\n" << stbi_failure_reason() << std::endl;
     }
@@ -37,15 +39,60 @@ ImageLoad::ImageLoad(const std::string& pathToImage) : m_pathToImage(pathToImage
 // Generate OpenGL texture
 void ImageLoad::generateTexture() {
     glGenTextures(1, &textureID);
+    GLenum error = glGetError();
+    if (error != GL_NO_ERROR) {
+        std::cerr << "OpenGL error after glGenTextures: " << error << std::endl;
+        return;
+    }
+
+    if (textureID == 0) {
+        std::cerr << "Error: glGenTextures failed!" << std::endl;
+        return;
+    }
+
     glBindTexture(GL_TEXTURE_2D, textureID);
+    error = glGetError();
+    if (error != GL_NO_ERROR) {
+        std::cerr << "OpenGL error after glBindTexture: " << error << std::endl;
+        return;
+    }
+
     glEnable(GL_TEXTURE_2D);
+    error = glGetError();
+    if (error != GL_NO_ERROR) {
+        std::cerr << "OpenGL error after glEnable: " << error << std::endl;
+        return;
+    }
 
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_image_width, m_image_height, 0, GL_RGBA, GL_UNSIGNED_BYTE, image_data);
-    
+    error = glGetError();
+    if (error != GL_NO_ERROR) {
+        std::cerr << "OpenGL error after glTexImage2D: " << error << std::endl;
+        return;
+    }
+
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    error = glGetError();
+    if (error != GL_NO_ERROR) {
+        std::cerr << "OpenGL error after glTexParameteri: " << error << std::endl;
+        return;
+    }
+
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    
+    error = glGetError();
+    if (error != GL_NO_ERROR) {
+        std::cerr << "OpenGL error after glTexParameteri: " << error << std::endl;
+        return;
+    }
+
     glBindTexture(GL_TEXTURE_2D, 0);
+    error = glGetError();
+    if (error != GL_NO_ERROR) {
+        std::cerr << "OpenGL error after glBindTexture: " << error << std::endl;
+        return;
+    }
+
+    std::cout << "Texture ID generated: " << textureID << std::endl;
 }
 
 void ImageLoad::setIcon(GLFWwindow* window) {

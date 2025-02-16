@@ -1,14 +1,16 @@
-#include "imgui.h"
 #include <GLFW/glfw3.h>
+
+#include <iostream>
 
 #include "../../API/TypingSpeedAPI.h"
 #include "../../Image_load.h"
 
 #include "Start.h"
 
-
+static TypingSpeedAPI api;
 
 void Start::renderStartWindow(bool &showStart){
+
     ImGui::PushStyleColor(ImGuiCol_Border, ImVec4(0.0f, 0.0f, 0.0f, 0.0f));
     ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.0f, 0.0f, 0.0f, 0.0f));
     ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.5f, 0.5f, 0.5f, 1.0f));
@@ -16,7 +18,7 @@ void Start::renderStartWindow(bool &showStart){
     ImGui::PushStyleVar(ImGuiStyleVar_FrameBorderSize, 0.0f);
     ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(1, 1));
 
-    static TypingSpeedAPI api;
+    
     static bool testStarted = false;
     static bool testFinished = false;
     static TypingSpeedAPI::TestResults finalResults = {0.0, 0.0, 0.0};
@@ -85,17 +87,26 @@ void Start::renderStartWindow(bool &showStart){
     ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 20);
     ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 410) / 2);
     ImTextureID restartWSButtonTexId = static_cast<ImTextureID>(static_cast<intptr_t>(m_restartWSButtonTexture.GetTextureID()));
-
+    //std::cout << "Texture ID" << restartWSButtonTexId << std::endl;
     if (ImGui::ImageButton("RestartBtn", restartWSButtonTexId, m_buttonSize, ImVec2(0,0),ImVec2(1,1),m_buttonColor)) {
         memset(inputBuffer, 0, sizeof(inputBuffer));
         testStarted = false;
         testFinished = false;
-        api.reset();  
+        api.reset();
     }   
 
     // "Exit"
 
+    ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 20);
+    ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 410) / 2);
+    ImTextureID exitBtnTextureId = static_cast<ImTextureID>(static_cast<intptr_t>(m_exitBtnTexture.GetTextureID()));
 
+    if (ImGui::ImageButton("ExitBtn",exitBtnTextureId, m_buttonSize, ImVec2(0,0),ImVec2(1,1))){
+        showStart = false;
+        memset(inputBuffer, 0, sizeof(inputBuffer));
+        testStarted = false;
+        api.reset();
+    }
 
     ImGui::PopStyleVar(2);
     ImGui::PopStyleColor(4);

@@ -11,7 +11,9 @@
 
 #include <GLFW/glfw3.h>
 
+Start renderStart;
 void MenuButtons::renderButtons() {
+
     float centerX = (ImGui::GetWindowSize().x - m_buttonSize.x) / 2;
     float centerY = (ImGui::GetWindowSize().y - m_buttonSize.y) / 2;
 
@@ -53,7 +55,6 @@ void MenuButtons::renderButtons() {
         glfwSetWindowShouldClose(glfwGetCurrentContext(), GLFW_TRUE);
     }
 
-    Start renderStart;
     if(m_showStart){
         renderStart.renderStartWindow(m_showStart);
     }
@@ -64,4 +65,5 @@ void MenuButtons::renderButtons() {
 
     ImGui::PopStyleVar(2);
     ImGui::PopStyleColor(4);
+    
 }
