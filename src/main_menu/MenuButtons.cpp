@@ -55,15 +55,19 @@ void MenuButtons::renderButtons() {
         glfwSetWindowShouldClose(glfwGetCurrentContext(), GLFW_TRUE);
     }
 
+
+
+    ImGui::PopStyleVar(2);
+    ImGui::PopStyleColor(4);
+    
+}
+
+void MenuButtons::renderInsideButtons(){
     if(m_showStart){
         renderStart.renderStartWindow(m_showStart);
     }
 
     if(m_showSettings){
         settingsRender(m_showSettings);
-    }
-
-    ImGui::PopStyleVar(2);
-    ImGui::PopStyleColor(4);
-    
+    }    
 }

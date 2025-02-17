@@ -17,6 +17,7 @@ public:
                     m_settingsButtonTexture("assets/textures/settings.png"),m_exitButtonTexture("assets/textures/exit.png"){}
     
     void renderButtons();
+    void renderInsideButtons();
 };
 
 #endif

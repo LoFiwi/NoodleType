@@ -11,6 +11,10 @@ static TypingSpeedAPI api;
 
 void Start::renderStartWindow(bool &showStart){
 
+    if(!m_restartWSButtonTexture || m_exitBtnTexture){
+        initializeTextures();
+    }
+
     ImGui::PushStyleColor(ImGuiCol_Border, ImVec4(0.0f, 0.0f, 0.0f, 0.0f));
     ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.0f, 0.0f, 0.0f, 0.0f));
     ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.5f, 0.5f, 0.5f, 1.0f));
@@ -86,8 +90,7 @@ void Start::renderStartWindow(bool &showStart){
 
     ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 20);
     ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 410) / 2);
-    ImTextureID restartWSButtonTexId = static_cast<ImTextureID>(static_cast<intptr_t>(m_restartWSButtonTexture.GetTextureID()));
-    //std::cout << "Texture ID" << restartWSButtonTexId << std::endl;
+    ImTextureID restartWSButtonTexId = static_cast<ImTextureID>(static_cast<intptr_t>(m_restartWSButtonTexture->GetTextureID()));
     if (ImGui::ImageButton("RestartBtn", restartWSButtonTexId, m_buttonSize, ImVec2(0,0),ImVec2(1,1),m_buttonColor)) {
         memset(inputBuffer, 0, sizeof(inputBuffer));
         testStarted = false;
@@ -99,7 +102,7 @@ void Start::renderStartWindow(bool &showStart){
 
     ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 20);
     ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 410) / 2);
-    ImTextureID exitBtnTextureId = static_cast<ImTextureID>(static_cast<intptr_t>(m_exitBtnTexture.GetTextureID()));
+    ImTextureID exitBtnTextureId = static_cast<ImTextureID>(static_cast<intptr_t>(m_exitBtnTexture->GetTextureID()));
 
     if (ImGui::ImageButton("ExitBtn",exitBtnTextureId, m_buttonSize, ImVec2(0,0),ImVec2(1,1))){
         showStart = false;
@@ -111,7 +114,6 @@ void Start::renderStartWindow(bool &showStart){
     ImGui::PopStyleVar(2);
     ImGui::PopStyleColor(4);
     ImGui::End();
-
 }
 
 
