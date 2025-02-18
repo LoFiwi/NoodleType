@@ -6,7 +6,7 @@
 
 class MenuButtons {
 private:
-    ImageLoad m_startButtonTexture, m_recordsButtonTexture, m_settingsButtonTexture, m_exitButtonTexture;
+    ImageLoad m_startButtonTexture, m_recordsButtonTexture, m_exitButtonTexture;
     bool m_showSettings = false;
     bool m_showStart = false;
     const ImVec2 m_buttonSize = ImVec2(450,70);
@@ -14,7 +14,7 @@ private:
 
 public:
     MenuButtons() : m_startButtonTexture("assets/textures/start.png"), m_recordsButtonTexture("assets/textures/records.png"),
-                    m_settingsButtonTexture("assets/textures/settings.png"),m_exitButtonTexture("assets/textures/exit.png"){}
+                    m_exitButtonTexture("assets/textures/exit.png"){}
     
     void renderButtons();
     void renderInsideButtons();

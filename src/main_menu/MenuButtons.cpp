@@ -41,12 +41,12 @@ void MenuButtons::renderButtons() {
         printf("My Records");
     }
     
-    // Settings Button
-    ImGui::SetCursorPosX(centerX);
-    ImTextureID settingsTexId = static_cast<ImTextureID>(static_cast<intptr_t>(m_settingsButtonTexture.GetTextureID()));
-    if (ImGui::ImageButton("SettingsBtn", settingsTexId, m_buttonSize, ImVec2(0,0),ImVec2(1,1), m_buttonColor)) {
-        m_showSettings = !m_showSettings;
-    }
+    // // Settings Button
+    // ImGui::SetCursorPosX(centerX);
+    // ImTextureID settingsTexId = static_cast<ImTextureID>(static_cast<intptr_t>(m_settingsButtonTexture.GetTextureID()));
+    // if (ImGui::ImageButton("SettingsBtn", settingsTexId, m_buttonSize, ImVec2(0,0),ImVec2(1,1), m_buttonColor)) {
+    //     m_showSettings = !m_showSettings;
+    // }
     
     // Exit Button
     ImGui::SetCursorPosX(centerX);
