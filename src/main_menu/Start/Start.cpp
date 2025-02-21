@@ -3,7 +3,7 @@
 #include <iostream>
 
 #include "../../API/TypingSpeedAPI.h"
-#include "../../Image_load.h"
+#include "../../ImageLoad.h"
 
 #include "Start.h"
 

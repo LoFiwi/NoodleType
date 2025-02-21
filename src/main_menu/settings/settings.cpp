@@ -2,7 +2,7 @@
 #include <GLFW/glfw3.h>
 #include "save_pressets.cpp"
 
-#include "../../Image_load.h"
+#include "../../ImageLoad.h"
 
 
 void settingsRender(bool& showSettings) {

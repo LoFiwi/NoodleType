@@ -12,7 +12,7 @@
 
 #include "main_menu/info.cpp"
 #include "main_menu/MenuButtons.h"
-#include "Image_load.h"
+#include "ImageLoad.h"
 
 int main() {
     if (!glfwInit()) return -1;

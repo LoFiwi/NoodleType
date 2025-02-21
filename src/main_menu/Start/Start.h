@@ -2,7 +2,7 @@
 #define START_H
 
 #include "imgui.h"
-#include "../../Image_load.h"
+#include "../../ImageLoad.h"
 
 class Start{
 private:

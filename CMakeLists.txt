@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 # Визначаємо файли проекту
 set(SOURCES
     src/main.cpp
-    src/Image_load.cpp
+    src/ImageLoad.cpp
     src/main_menu/MenuButtons.cpp
     src/API/TypingSpeedAPI.cpp
     imgui-master/imgui.cpp
