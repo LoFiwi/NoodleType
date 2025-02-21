@@ -10,7 +10,7 @@ private:
     bool m_showSettings = false;
     bool m_showStart = false;
     const ImVec2 m_buttonSize = ImVec2(450,70);
-    const ImVec4 m_buttonColor = ImVec4(1.0f, 1.0f, 1.0f, 1.0f);
+    const ImVec4 m_buttonColor = ImVec4(1.0f,1.0f,1.0f,1.0f);
 
 public:
     MenuButtons() : m_startButtonTexture("assets/textures/start.png"), m_recordsButtonTexture("assets/textures/records.png"),
