@@ -34,12 +34,12 @@ void MenuButtons::renderButtons() {
     ImGui::Spacing();
     ImGui::Spacing();
 
-    // My Records Button
-    ImGui::SetCursorPosX(centerX);
-    ImTextureID recordsTexId = static_cast<ImTextureID>(static_cast<intptr_t>(m_recordsButtonTexture.GetTextureID()));
-    if (ImGui::ImageButton("MyRecordsBtn", recordsTexId, m_buttonSize, ImVec2(0, 0), ImVec2(1, 1), m_buttonColor)) {
-        printf("My Records");
-    }
+    // // My Records Button
+    // ImGui::SetCursorPosX(centerX);
+    // ImTextureID recordsTexId = static_cast<ImTextureID>(static_cast<intptr_t>(m_recordsButtonTexture.GetTextureID()));
+    // if (ImGui::ImageButton("MyRecordsBtn", recordsTexId, m_buttonSize, ImVec2(0, 0), ImVec2(1, 1), m_buttonColor)) {
+    //     printf("My Records");
+    // }
     
     // // Settings Button
     // ImGui::SetCursorPosX(centerX);
