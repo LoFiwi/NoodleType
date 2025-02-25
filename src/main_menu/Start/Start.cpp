@@ -32,6 +32,7 @@ void Start::renderStartWindow(bool &showStart){
     ImGui::SetNextWindowSize(io.DisplaySize);
     ImGui::Begin("Start Page", nullptr, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove);
 
+    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f,1.0f,1.0f,1.0f));
     ImGui::SetCursorPosX((ImGui::GetWindowSize().x - ImGui::CalcTextSize("Press Enter to stop test.").x) / 2);
     ImGui::Text("Press Enter to stop test.");
 
@@ -39,12 +40,15 @@ void Start::renderStartWindow(bool &showStart){
     ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 20);
     ImGui::SetCursorPosX((ImGui::GetWindowSize().x - ImGui::CalcTextSize(api.getCurrentText().c_str()).x) / 2);
     ImGui::TextWrapped("%s", api.getCurrentText().c_str());
+    ImGui::PopStyleColor();
 
     // Input field
     static char inputBuffer[256] = "";
     ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 50);
     ImGui::SetCursorPosX((ImGui::GetWindowSize().x - 400) / 2);
-    
+
+    ImGui::PushStyleColor(ImGuiCol_FrameBg, ImVec4(0.2f, 0.2f, 0.2f, 1.0f));    // Input field color.
+    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, 1.0f));   // Input text color.
     if (!testFinished) {
         bool enter_pressed = ImGui::InputTextMultiline("##input", inputBuffer, IM_ARRAYSIZE(inputBuffer),
             ImVec2(400, 100), ImGuiInputTextFlags_AllowTabInput);
@@ -65,7 +69,8 @@ void Start::renderStartWindow(bool &showStart){
         ImGui::InputTextMultiline("##input", inputBuffer, IM_ARRAYSIZE(inputBuffer),
             ImVec2(400, 100), ImGuiInputTextFlags_ReadOnly);
     }
-
+    ImGui::PopStyleColor();
+    ImGui::PopStyleColor();
     // Show results
     if (testFinished) {
         // show final results
