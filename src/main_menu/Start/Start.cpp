@@ -3,7 +3,6 @@
 #include <iostream>
 
 #include "../../API/TypingSpeedAPI.h"
-//#include "../../ImageLoad.h"
 
 #include "Start.h"
 
@@ -21,6 +20,7 @@ void Start::renderStartWindow(bool &showStart){
     ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.0f, 0.0f, 0.0f, 0.0f));
     ImGui::PushStyleVar(ImGuiStyleVar_FrameBorderSize, 0.0f);
     ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(1, 1));
+
 
     
     static bool testStarted = false;
