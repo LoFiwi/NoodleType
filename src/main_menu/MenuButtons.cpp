@@ -8,10 +8,13 @@
 #include "stb_image.h"
 
 #include <cstdio>
+#include "Start/PreStart.h"
+#include "Start/PreStart.cpp"
 
 #include <GLFW/glfw3.h>
 
 Start renderStart;
+PreStart renderPreStart;
 void MenuButtons::renderButtons() {
 
     float centerX = (ImGui::GetWindowSize().x - m_buttonSize.x) / 2;
@@ -64,8 +67,9 @@ void MenuButtons::renderButtons() {
 
 void MenuButtons::renderInsideButtons(){
     if(m_showStart){
-        renderStart.renderStartWindow(m_showStart);
+        renderPreStart.renderPreStartWindow(m_showStart);
     }
+    
 
     if(m_showSettings){
         settingsRender(m_showSettings);
