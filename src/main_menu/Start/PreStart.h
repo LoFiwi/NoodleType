@@ -11,9 +11,10 @@ private:
     ImageLoad* m_newRunButton;
     ImageLoad* m_competitorIconTexture;
 
-    int selectedLanguage = 0; // Індекс вибору мови
-    float timerValue = 30.0f; // Значення таймера за замовчуванням
-
+    int selectedLanguage = 0;
+    float timerValue = 30.0f;
+    bool m_showStart = false;
+    
     const ImVec2 m_buttonSize = ImVec2(50, 50);
 
 public:
@@ -45,7 +46,8 @@ public:
         }
     }
 
-    void renderPreStartWindow(bool& show);
+    void renderPreStartWindow(bool &show);
+    void renderNewRun();
 };
 
 #endif

@@ -6,10 +6,11 @@ size_t TypingSpeedAPI::WriteCallback(void* contents, size_t size, size_t nmemb, 
     return size * nmemb;
 }
 
+
 TypingSpeedAPI::TypingSpeedAPI() : isTestActive(false) {
     curl_global_init(CURL_GLOBAL_DEFAULT);
     // Temporary text until the real API is connected
-    sampleText = "The quick brown fox jumps over the lazy dog.";
+    sampleText = "Fast typing allows you to save time and increase productivity. It is important not only to press the keys quickly but also to maintain accuracy. Regular practice will help develop muscle memory and make typing an intuitive process.";
 }
 
 TypingSpeedAPI::~TypingSpeedAPI() {

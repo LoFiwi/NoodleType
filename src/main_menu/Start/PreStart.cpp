@@ -4,9 +4,8 @@
 #include "../../API/TypingSpeedAPI.h"
 
 extern Start renderStart;
-static bool showPreStart = true;  // Управляет видимостью PreStart
 
-void PreStart::renderPreStartWindow(bool& show) {
+void PreStart::renderPreStartWindow(bool &show){
     if (!m_arrowIconTexture||!m_timerIconTexture  ||!m_languageIconTexture || !m_newRunButton  ||!m_competitorIconTexture) {
         initializeTexture();
     }
@@ -25,11 +24,11 @@ void PreStart::renderPreStartWindow(bool& show) {
 
     float centerX = io.DisplaySize.x * 0.5f;
 
-    // 🔹 Кнопка "←" (стрелка назад)
+    // Arrow
     ImGui::SetCursorPos(ImVec2(10, 10));
     ImTextureID arrowIconId = static_cast<ImTextureID>(static_cast<intptr_t>(m_arrowIconTexture->GetTextureID())); 
     if (ImGui::ImageButton("Back", arrowIconId, m_buttonSize, ImVec2(0,0), ImVec2(1,1))) {
-        show = false;
+        show = !show;
     }
 
     static bool showLanguageOptions = false;
@@ -40,37 +39,36 @@ void PreStart::renderPreStartWindow(bool& show) {
     float languageButtonX = centerX - languageButtonWidth * 0.5f;
     float languageButtonY = 80.0f;
 
-    // 🔹 Кнопка выбора языка
+    // Language choose
     ImGui::SetCursorPos(ImVec2(languageButtonX, languageButtonY));
     if (ImGui::ImageButton("Language", languageIconId, ImVec2(languageButtonWidth, languageButtonHeight))) {
-        showLanguageOptions = !showLanguageOptions; // Переключаем видимость выбора языка
+        showLanguageOptions = !showLanguageOptions;
     }
 
-    // 🔹 Если кнопка нажата, показываем список выбора языка
-if (showLanguageOptions) {
-    // Стиль серого цвета
-    ImGui::PushStyleColor(ImGuiCol_FrameBg, ImVec4(0.2f, 0.2f, 0.2f, 1.0f));
-    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.8f, 0.8f, 0.8f, 1.0f));
-    ImGui::PushStyleColor(ImGuiCol_PopupBg, ImVec4(0.15f, 0.15f, 0.15f, 1.0f));
-    ImGui::PushStyleColor(ImGuiCol_Border, ImVec4(0.1f, 0.1f, 0.1f, 1.0f));
+    if (showLanguageOptions) {
+        // Стиль серого цвета
+        ImGui::PushStyleColor(ImGuiCol_FrameBg, ImVec4(0.2f, 0.2f, 0.2f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.8f, 0.8f, 0.8f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_PopupBg, ImVec4(0.15f, 0.15f, 0.15f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_Border, ImVec4(0.1f, 0.1f, 0.1f, 1.0f));
 
-    // Размер списка = размеру кнопки
-    float languageListWidth = languageButtonWidth;
-    float languageListX = centerX - languageListWidth * 0.5f;
-    float languageListY = languageButtonY + languageButtonHeight + 5.0f; // Чуть ниже кнопки
+        // Размер списка = размеру кнопки
+        float languageListWidth = languageButtonWidth;
+        float languageListX = centerX - languageListWidth * 0.5f;
+        float languageListY = languageButtonY + languageButtonHeight + 5.0f; // Чуть ниже кнопки
 
-    ImGui::SetCursorPos(ImVec2(languageListX, languageListY));
-    static int selectedLanguage = 0;
-    const char* languages[] = { "English", "Ukrainian" };
+        ImGui::SetCursorPos(ImVec2(languageListX, languageListY));
+        static int selectedLanguage = 0;
+        const char* languages[] = { "English", "Ukrainian" };
 
-    ImGui::PushItemWidth(languageListWidth);  // Делаем список таким же широким
-    ImGui::Combo("##Language", &selectedLanguage, languages, IM_ARRAYSIZE(languages));
-    ImGui::PopItemWidth();
+        ImGui::PushItemWidth(languageListWidth);  // Делаем список таким же широким
+        ImGui::Combo("##Language", &selectedLanguage, languages, IM_ARRAYSIZE(languages));
+        ImGui::PopItemWidth();
 
-    ImGui::PopStyleColor(4);
-} 
+        ImGui::PopStyleColor(4);
+    } 
 
-    // 🔹 Панель таймера
+    // Timer set
     ImTextureID timerTextureId = static_cast<ImTextureID>(static_cast<intptr_t>(m_timerIconTexture->GetTextureID()));
     float timerPanelX = centerX - 250;
     float timerPanelY = 150.0f;
@@ -80,62 +78,64 @@ if (showLanguageOptions) {
     
     ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
     static float timerValue = 30.0f;
-    ImGui::SetCursorPos(ImVec2(timerPanelX + 15, timerPanelY + 50)); // Подписал ползунок ниже
+    ImGui::SetCursorPos(ImVec2(timerPanelX + 15, timerPanelY + 50));
     
-    // Настройка темно-серого цвета для ползунка
-    ImGui::PushStyleColor(ImGuiCol_FrameBg, ImVec4(0.2f, 0.2f, 0.2f, 1.0f)); // Тёмно-серый фон
-    ImGui::PushStyleColor(ImGuiCol_SliderGrab, ImVec4(0.4f, 0.4f, 0.4f, 1.0f)); // Серый ползунок
+    ImGui::PushStyleColor(ImGuiCol_FrameBg, ImVec4(0.2f, 0.2f, 0.2f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_SliderGrab, ImVec4(0.4f, 0.4f, 0.4f, 1.0f));
     
     ImGui::PushItemWidth(170);
     ImGui::SliderFloat("##Timer", &timerValue, 10.0f, 120.0f, "%.0f s");
     ImGui::PopItemWidth();
     
-    ImGui::PopStyleColor(3); // Убираем 3 последних изменения стиля (текст + 2 цвета)
+    ImGui::PopStyleColor(3);
     
 
 
-   // 🔹 Competitor панель с текстовым вводом
-ImTextureID competitorTextureId = static_cast<ImTextureID>(static_cast<intptr_t>(m_competitorIconTexture->GetTextureID()));
-float competitorPanelWidth = 200.0f;
-float competitorPanelHeight = 100.0f;
-float competitorPanelX = centerX + 50;
-float competitorPanelY = 150.0f;
+    //Competitor
+    ImTextureID competitorTextureId = static_cast<ImTextureID>(static_cast<intptr_t>(m_competitorIconTexture->GetTextureID()));
+    float competitorPanelWidth = 200.0f;
+    float competitorPanelHeight = 100.0f;
+    float competitorPanelX = centerX + 50;
+    float competitorPanelY = 150.0f;
 
-// 🔹 Отображаем фон Competitor (изображение)
-ImGui::SetCursorPos(ImVec2(competitorPanelX, competitorPanelY));
-ImGui::Image(competitorTextureId, ImVec2(competitorPanelWidth, competitorPanelHeight));
+    ImGui::SetCursorPos(ImVec2(competitorPanelX, competitorPanelY));
+    ImGui::Image(competitorTextureId, ImVec2(competitorPanelWidth, competitorPanelHeight));
 
-// 🔹 Поле ввода текста (цвета: белый текст, серый фон)
-static char competitorName[64] = ""; // Буфер для ввода текста
-ImGui::SetCursorPos(ImVec2(competitorPanelX + 15, competitorPanelY + 50)); // Смещаем вниз
-ImGui::PushItemWidth(competitorPanelWidth - 30); // Подгоняем ширину
+    static char competitorName[64] = "";
+    ImGui::SetCursorPos(ImVec2(competitorPanelX + 15, competitorPanelY + 50));
+    ImGui::PushItemWidth(competitorPanelWidth - 30);
 
-ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, 1.0f));        // 🔹 Белый цвет текста
-ImGui::PushStyleColor(ImGuiCol_FrameBg, ImVec4(0.2f, 0.2f, 0.2f, 1.0f));    // 🔹 Серый фон поля ввода
+    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_FrameBg, ImVec4(0.2f, 0.2f, 0.2f, 1.0f));
 
-ImGui::InputText("##Competitor", competitorName, IM_ARRAYSIZE(competitorName));
+    ImGui::InputText("##Competitor", competitorName, IM_ARRAYSIZE(competitorName));
 
-ImGui::PopStyleColor(2); // Сбрасываем стили (2 цвета)
-ImGui::PopItemWidth();
+    ImGui::PopStyleColor(2);
+    ImGui::PopItemWidth();
 
-// 🔹 Кнопка "New Run" внизу
-float newRunButtonWidth = 500.0f;
-float newRunButtonHeight = 50.0f;
-float newRunButtonX = (ImGui::GetWindowSize().x - newRunButtonWidth) * 0.5f;
-float newRunButtonY = ImGui::GetWindowSize().y - newRunButtonHeight - 40.0f;
+    // New Run
+    float newRunButtonWidth = 500.0f;
+    float newRunButtonHeight = 50.0f;
+    float newRunButtonX = (ImGui::GetWindowSize().x - newRunButtonWidth) * 0.5f;
+    float newRunButtonY = ImGui::GetWindowSize().y - newRunButtonHeight - 40.0f;
 
-ImGui::SetCursorPos(ImVec2(newRunButtonX, newRunButtonY));
-ImTextureID newRunTexId = static_cast<ImTextureID>(static_cast<intptr_t>(m_newRunButton->GetTextureID()));
+    ImGui::SetCursorPos(ImVec2(newRunButtonX, newRunButtonY));
+    ImTextureID newRunTexId = static_cast<ImTextureID>(static_cast<intptr_t>(m_newRunButton->GetTextureID()));
 
-if (ImGui::ImageButton("NewRunBtn", newRunTexId, ImVec2(newRunButtonWidth, newRunButtonHeight))) {
-    showPreStart = false;  // Закрываем PreStart
-    renderStart.renderStartWindow(showPreStart);  // Открываем окно теста
-
-   TypingSpeedAPI();  // 🏁 Запускаем тест
-}
+    if (ImGui::ImageButton("NewRunBtn", newRunTexId, ImVec2(newRunButtonWidth, newRunButtonHeight))){
+        m_showStart = !m_showStart;
+        renderNewRun();
+    }
 
     ImGui::PopStyleVar(2);
     ImGui::PopStyleColor(4);
     ImGui::End();
+
+    renderNewRun();
 }
 
+void PreStart::renderNewRun(){
+    if(m_showStart){
+        renderStart.renderStartWindow(m_showStart);
+    }
+}

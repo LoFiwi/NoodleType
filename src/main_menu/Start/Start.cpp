@@ -37,9 +37,12 @@ void Start::renderStartWindow(bool &showStart){
     ImGui::Text("Press Enter to stop test.");
 
     // Display text for typing
+    
     ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 20);
-    ImGui::SetCursorPosX((ImGui::GetWindowSize().x - ImGui::CalcTextSize(api.getCurrentText().c_str()).x) / 2);
+    ImGui::SetCursorPosX(ImGui::GetStyle().WindowPadding.x); // Відступ зліва
+    ImGui::PushTextWrapPos(ImGui::GetWindowContentRegionMax().x);
     ImGui::TextWrapped("%s", api.getCurrentText().c_str());
+    ImGui::PopTextWrapPos();
     ImGui::PopStyleColor();
 
     // Input field
