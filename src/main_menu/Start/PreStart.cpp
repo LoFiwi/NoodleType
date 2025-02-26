@@ -1,8 +1,10 @@
 #include "PreStart.h"
 #include "Start.h"
 #include "../../ImageLoad.h"
+#include "../../API/TypingSpeedAPI.h"
 
 extern Start renderStart;
+static bool showPreStart = true;  // Управляет видимостью PreStart
 
 void PreStart::renderPreStartWindow(bool& show) {
     if (!m_arrowIconTexture||!m_timerIconTexture  ||!m_languageIconTexture || !m_newRunButton  ||!m_competitorIconTexture) {
@@ -115,6 +117,23 @@ ImGui::InputText("##Competitor", competitorName, IM_ARRAYSIZE(competitorName));
 
 ImGui::PopStyleColor(2); // Сбрасываем стили (2 цвета)
 ImGui::PopItemWidth();
+
+// 🔹 Кнопка "New Run" внизу
+float newRunButtonWidth = 500.0f;
+float newRunButtonHeight = 50.0f;
+float newRunButtonX = (ImGui::GetWindowSize().x - newRunButtonWidth) * 0.5f;
+float newRunButtonY = ImGui::GetWindowSize().y - newRunButtonHeight - 40.0f;
+
+ImGui::SetCursorPos(ImVec2(newRunButtonX, newRunButtonY));
+ImTextureID newRunTexId = static_cast<ImTextureID>(static_cast<intptr_t>(m_newRunButton->GetTextureID()));
+
+if (ImGui::ImageButton("NewRunBtn", newRunTexId, ImVec2(newRunButtonWidth, newRunButtonHeight))) {
+    showPreStart = false;  // Закрываем PreStart
+    renderStart.renderStartWindow(showPreStart);  // Открываем окно теста
+
+   TypingSpeedAPI();  // 🏁 Запускаем тест
+}
+
     ImGui::PopStyleVar(2);
     ImGui::PopStyleColor(4);
     ImGui::End();
