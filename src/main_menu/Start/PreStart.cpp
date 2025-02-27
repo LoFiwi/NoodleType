@@ -46,13 +46,11 @@ void PreStart::renderPreStartWindow(bool &show){
     }
 
     if (showLanguageOptions) {
-        // Стиль серого цвета
         ImGui::PushStyleColor(ImGuiCol_FrameBg, ImVec4(0.2f, 0.2f, 0.2f, 1.0f));
         ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.8f, 0.8f, 0.8f, 1.0f));
         ImGui::PushStyleColor(ImGuiCol_PopupBg, ImVec4(0.15f, 0.15f, 0.15f, 1.0f));
         ImGui::PushStyleColor(ImGuiCol_Border, ImVec4(0.1f, 0.1f, 0.1f, 1.0f));
 
-        // Размер списка = размеру кнопки
         float languageListWidth = languageButtonWidth;
         float languageListX = centerX - languageListWidth * 0.5f;
         float languageListY = languageButtonY + languageButtonHeight + 5.0f; // Чуть ниже кнопки
